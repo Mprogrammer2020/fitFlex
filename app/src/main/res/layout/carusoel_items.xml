@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <TextView
+            android:id="@+id/goalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/your_goal"
+            android:textColor="@color/lightBlack"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/bestProgramText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textAlignment="center"
+            android:text="@string/program"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/goalText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="wrap_content"
+            android:layout_height="490dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/card_goal_background"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bestProgramText"
+            />
+
+        <ImageView
+            android:id="@+id/cardUserImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/first_card"
+            app:layout_constraintEnd_toEndOf="@+id/cardImage"
+            app:layout_constraintStart_toStartOf="@+id/cardImage"
+            app:layout_constraintTop_toTopOf="@+id/cardImage" />
+
+
+        <TextView
+            android:id="@+id/cardTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/improve_shape"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintEnd_toEndOf="@+id/cardUserImage"
+            app:layout_constraintStart_toStartOf="@+id/cardUserImage"
+            app:layout_constraintTop_toBottomOf="@+id/cardUserImage" />
+
+
+        <ImageView
+            android:id="@+id/viewImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:src="@drawable/view"
+            android:layout_marginTop="1dp"
+            android:layout_marginHorizontal="16sp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/cardTitleText"
+            app:layout_constraintStart_toStartOf="@+id/cardTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/cardTitleText" />
+
+        <TextView
+            android:id="@+id/cardDescriptionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/card_description"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="@+id/cardUserImage"
+            app:layout_constraintStart_toStartOf="@+id/cardUserImage"
+            app:layout_constraintTop_toBottomOf="@+id/cardTitleText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Fitness</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_started">Get Started</string>
+    <string name="description">Don\'t worry if you have trouble determining your goals, We can help you determine your goals and track your goals</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="hey_there">Hey There,</string>
+    <string name="first_name"><font size="14">First Name</font></string>
+    <string name="last_name"><font size="14">Last Name</font></string>
+    <string name="email"><font size="14">Email</font></string>
+    <string name="password"><font size="14">Password</font></string>
+    <string name="register">Register</string>
+    <string name="or">Or</string>
+    <string name="complete_profile">Let’s complete your profile</string>
+    <string name="more_about">It will help us to know more about you!</string>
+    <string name="date_of_birth"><font size="14">Date of Birth</font></string>
+    <string name="your_weight"><font size="14">Your Weight</font></string>
+    <string name="your_height"><font size="14">Your Height</font></string>
+    <string name="next">Next</string>
+    <string name="forgot_your_password"><u>Forgot your password?</u></string>
+    <string name="login">Login</string>
+    <string name="confirm">Confirm</string>
+    <string name="your_goal">What is your goal ?</string>
+    <string name="program">It will help us to choose a best \nprogram for you</string>
+    <string name="welcome">Welcome, Stefani</string>
+    <string name="description_text">You are all set now, let’s reach your \ngoals together with us</string>
+    <string name="go_to_home">Go To Home</string>
+    <string name="improve_shape">Improve Shape</string>
+    <string name="card_description">I have a low amount of body fat and need / want to build more muscle</string>
+    <string name="track_your_goal">Track Your Goal</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="welcome_backs">Welcome Back,</string>
+    <string name="stefani_wong">Stefani Wong</string>
+    <string name="bmi_body_mass_index">BMI(Body Mass Index)</string>
+    <string name="normal_weight">You have a normal weight</string>
+    <string name="today_target">Today Target</string>
+    <string name="activity_status">Activity Status</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="_78_bpm">78 BPM</string>
+    <string name="water_intake">Water Intake</string>
+    <string name="_4_liters">4 Liters</string>
+    <string name="liters_left">2 liters \nleft</string>
+    <string name="sleep">Sleep</string>
+    <string name="_760_kcal">760 KCal</string>
+    <string name="_230kcal_left">230kCal \nleft</string>
+    <string name="_20minutes">20minutes</string>
+    <string name="_180_calories_burn">180 Calories Burn</string>
+    <string name="fullbody_workout">FullBody Workout</string>
+    <string name="calories">Calories</string>
+    <string name="notification">Notification</string>
+    <string name="title">Hey, it’s time for lunch</string>
+    <string name="about_1_minutes_ago">About 1 minutes ago</string>
+    <string name="activity_tracker">Activity Tracker</string>
+    <string name="foot_steps">Foot Steps</string>
+    <string name="latest_activity">Latest Activity</string>
+    <string name="see_more">See more</string>
+    <string name="activity_progress">Activity Progress</string>
+    <string name="profile">Profile</string>
+    <string name="lose_a_fat_program">Lose a Fat Program</string>
+    <string name="_22yo">22yo</string>
+    <string name="_180cm">180cm</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="age">Age</string>
+    <string name="account">Account</string>
+    <string name="personal_data">Personal Data</string>
+    <string name="achievement">Achievement</string>
+    <string name="activity_history">Activity History</string>
+    <string name="workout_history">Workout History</string>
+    <string name="pop_up_notification">Pop-up Notification</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="other">Other</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="settings">Settings</string>
+    <string name="congratulations">Congratulations, You Have \nFinished Your Workout</string>
+    <string name="description_ecxcercise">Exercises is king and nutrition is queen. Combine the \ntwo and you will have a kingdom</string>
+    <string name="daily_workout_schedule">Daily Workout Schedule</string>
+    <string name="upcoming_workout">Upcoming Workout</string>
+    <string name="today_03_00pm">Today, 03:00pm</string>
+    <string name="what_do_you_want_to_train">What Do You Want to Train</string>
+    <string name="_11_excercise">11 Excercise</string>
+    <string name="latest_workout">Latest Workout</string>
+    <string name="workout_tracker">Workout Tracker</string>
+    <string name="_320_calories_burn">320 Calories Burn</string>
+    <string name="schedule_workout">Schedule Workout</string>
+    <string name="times">05/23,9:00 AM</string>
+    <string name="difficulity">Difficulity</string>
+    <string name="beginner">Beginner</string>
+    <string name="barbell">Barbell</string>
+    <string name="exercises">Exercises</string>
+    <string name="_3_sets">3 sets</string>
+    <string name="set_1">Set 1</string>
+    <string name="warm_up">Warm Up</string>
+    <string name="start_workout">Start Workout</string>
+    <string name="you_ll_need">You\'ll Need</string>
+    <string name="_5_items">5 Items</string>
+    <string name="jumping_jack">Jumping Jack</string>
+    <string name="easy">Easy</string>
+    <string name="description_data">A jumping jack, also known as a star jump and called a side-straddle hop in the US military, is a physical jumping exercise performed by jumping to a position with the legs spread wide</string>
+    <string name="read_more">Read More</string>
+    <string name="show_less">Show Less</string>
+    <string name="how_to_do_it">How To Do It</string>
+    <string name="custom_repetitions">Custom Repetitions</string>
+    <string name="search_pancake"><font size="12">Search Pancake</font></string>
+    <string name="recommendation_diet">Recommendation \nfor Diet</string>
+    <string name="ingredients">Ingredients That You \nWill Need</string>
+    <string name="details_workout">Details Workout</string>
+    <string name="custom_weights">Custom Weights</string>
+    <string name="choose_workout">Choose Workout</string>
+    <string name="time">Time</string>
+    <string name="thu_27_may_2023">Thu,27 May 2023</string>
+    <string name="upperbody_workout">Upperbody Workout</string>
+    <string name="descriptions">Description</string>
+    <string name="step_by_step">Step by Step</string>
+    <string name="_8_items">8 items</string>
+    <string name="add_to_breakfast_meal">Add to Breakfast Meal</string>
+    <string name="today_meal_nutritions">Today Meal Nutritions</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="_2_meals">2 meals</string>
+    <string name="_30mins">30mins</string>
+    <string name="_05_00am">05:00am</string>
+
+</resources>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.AddScheduleFragment">
+
+    <include
+        android:id="@+id/addScheduleToolbar"
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/addScheduleToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+
+
+            <ImageView
+                android:id="@+id/calendarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calendar_icon"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/calendarDayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thu_27_may_2023"
+                android:textSize="12sp"
+                android:textColor="@color/grey"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/calendarIcon"
+                app:layout_constraintStart_toEndOf="@+id/calendarIcon"
+                app:layout_constraintTop_toTopOf="@+id/calendarIcon" />
+
+
+            <TextView
+                android:id="@+id/timePickerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textSize="14sp"
+                android:textColor="@color/lightBlack"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="@+id/calendarIcon"
+                app:layout_constraintTop_toBottomOf="@+id/calendarIcon" />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:calendarViewShown="false"
+                app:barrierDirection="bottom"
+                android:fadingEdge="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timePickerText" />
+
+
+            <TextView
+                android:id="@+id/detailsWorkoutText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_workout"
+                android:layout_marginTop="25dp"
+                android:textSize="14sp"
+                android:textColor="@color/lightBlack"
+                android:fontFamily="@font/poppins_medium"
+                app:layout_constraintStart_toStartOf="@+id/timePickerText"
+                app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+
+            <ImageView
+                android:id="@+id/chooseWorkoutImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/schedule_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/detailsWorkoutText"
+                app:layout_constraintTop_toBottomOf="@+id/detailsWorkoutText" />
+
+            <ImageView
+                android:id="@+id/iconBarbel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_barbel"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
+                app:layout_constraintStart_toStartOf="@+id/chooseWorkoutImg"
+                app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
+
+            <TextView
+                android:id="@+id/chooseWorkoutText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_workout"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/grey"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
+                app:layout_constraintStart_toEndOf="@+id/iconBarbel"
+                app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
+
+
+            <TextView
+                android:id="@+id/upperbodyWorkouotText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upperbody_workout"
+                android:textColor="@color/hintColor"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
+                app:layout_constraintEnd_toStartOf="@+id/rightIcon"
+                app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
+
+
+            <ImageView
+                android:id="@+id/rightIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right_icon"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
+                app:layout_constraintEnd_toEndOf="@+id/chooseWorkoutImg"
+                app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
+
+
+            <ImageView
+                android:id="@+id/difficultyImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/schedule_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/chooseWorkoutImg"
+                app:layout_constraintTop_toBottomOf="@+id/chooseWorkoutImg" />
+
+            <ImageView
+                android:id="@+id/iconDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_swap"
+                app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
+                app:layout_constraintStart_toStartOf="@+id/difficultyImg"
+                app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
+
+            <TextView
+                android:id="@+id/difficultyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulity"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/grey"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
+                app:layout_constraintStart_toEndOf="@+id/iconDifficulty"
+                app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
+
+            <TextView
+                android:id="@+id/beginnerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beginner"
+                android:textColor="@color/hintColor"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
+                app:layout_constraintEnd_toStartOf="@+id/rightIcon"
+                app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right_icon"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
+                app:layout_constraintEnd_toEndOf="@+id/difficultyImg"
+                app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
+
+            <ImageView
+                android:id="@+id/customRepetitionsImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/schedule_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/difficultyImg"
+                app:layout_constraintTop_toBottomOf="@+id/difficultyImg" />
+
+            <ImageView
+                android:id="@+id/iconCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chart_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
+                app:layout_constraintStart_toStartOf="@+id/customRepetitionsImg"
+                app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
+
+            <TextView
+                android:id="@+id/customRepetiotionsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_repetitions"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
+                app:layout_constraintStart_toEndOf="@+id/iconCustom"
+                app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right_icon"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
+                app:layout_constraintEnd_toEndOf="@+id/customRepetitionsImg"
+                app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
+
+
+            <ImageView
+                android:id="@+id/customWeightImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/schedule_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/customRepetitionsImg"
+                app:layout_constraintTop_toBottomOf="@+id/customRepetitionsImg" />
+
+            <ImageView
+                android:id="@+id/iconWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chart_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
+                app:layout_constraintStart_toStartOf="@+id/customWeightImg"
+                app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
+
+            <TextView
+                android:id="@+id/customWeightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_weights"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
+                app:layout_constraintStart_toEndOf="@+id/iconWeight"
+                app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right_icon"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
+                app:layout_constraintEnd_toEndOf="@+id/customWeightImg"
+                app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginHorizontal="30dp"
+                android:text="Save"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginTop="120dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/customWeightImg"
+                android:background="@drawable/register_button_background"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

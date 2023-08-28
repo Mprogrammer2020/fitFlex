@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/workoutTrainBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_background"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="25dp" />
+
+
+    <TextView
+        android:id="@+id/workoutNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fullbody_workout"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/lightBlack"
+        app:layout_constraintStart_toStartOf="@+id/workoutTrainBackground"
+        app:layout_constraintTop_toTopOf="@+id/workoutTrainBackground" />
+
+    <TextView
+        android:id="@+id/exerciseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/_11_excercise"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/workoutNameText"
+        app:layout_constraintTop_toBottomOf="@+id/workoutNameText" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="10dp"
+        android:background="@color/grey"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/exerciseText"
+        app:layout_constraintStart_toEndOf="@+id/exerciseText"
+        app:layout_constraintTop_toTopOf="@+id/exerciseText" />
+
+
+    <TextView
+        android:id="@+id/minutesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="4dp"
+        android:text="32mins"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/exerciseText"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/exerciseText" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/view_more_icon_whitwe"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="@+id/exerciseText"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseText" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginVertical="10dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.rounded50"
+        android:src="@drawable/training_background_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/workoutTrainBackground"
+        app:layout_constraintEnd_toEndOf="@+id/workoutTrainBackground"
+        app:layout_constraintTop_toTopOf="@+id/workoutTrainBackground" />
+
+    <ImageView
+        android:id="@+id/workoutIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rope_jump"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

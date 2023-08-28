@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingEnd="15dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backgroundImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:elevation="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/protiens_background"/>
+
+        <ImageView
+            android:id="@+id/itemsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:src="@drawable/flour_icon"
+            app:layout_constraintStart_toStartOf="@+id/backgroundImg"
+            app:layout_constraintEnd_toEndOf="@+id/backgroundImg"
+            app:layout_constraintTop_toTopOf="@+id/backgroundImg"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundImg"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/itemsNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wheat Flour"
+        android:textSize="10sp"
+        android:textColor="@color/lightBlack"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintEnd_toEndOf="@id/constraint"
+        app:layout_constraintTop_toBottomOf="@id/constraint"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/gramText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12g"
+        android:textSize="8sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/itemsNameText"
+        app:layout_constraintStart_toStartOf="@id/itemsNameText"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

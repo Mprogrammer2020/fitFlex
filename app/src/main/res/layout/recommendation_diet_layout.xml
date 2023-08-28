@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/recommendationBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/recommendation_background"/>
+
+    <ImageView
+        android:id="@+id/foodItemNameIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pancake_icon"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="@+id/recommendationBackground"
+        app:layout_constraintEnd_toEndOf="@+id/recommendationBackground"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/foodItemNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Honey Pancake"
+        android:textColor="@color/lightBlack"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/recommendationBackground"
+        app:layout_constraintStart_toStartOf="@+id/recommendationBackground"
+        app:layout_constraintTop_toBottomOf="@+id/foodItemNameIcon" />
+
+    <TextView
+        android:id="@+id/easyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Easy"
+        android:textColor="@color/grey"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/foodItemNameIcon"
+        app:layout_constraintTop_toBottomOf="@+id/foodItemNameText" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="4dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@+id/minutesText"
+        app:layout_constraintStart_toEndOf="@+id/easyText"
+        app:layout_constraintTop_toTopOf="@+id/minutesText" />
+
+
+    <TextView
+        android:id="@+id/minutesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="4dp"
+        android:text="32mins"
+        android:textColor="@color/grey"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/easyText"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/easyText" />
+
+
+    <View
+        android:id="@+id/viewBackground"
+        android:layout_width="1dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="4dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@+id/caloriesBurnText"
+        app:layout_constraintStart_toEndOf="@+id/minutesText"
+        app:layout_constraintTop_toTopOf="@+id/caloriesBurnText" />
+
+
+    <TextView
+        android:id="@+id/caloriesBurnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="180kCal"
+        android:textColor="@color/grey"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/easyText"
+        app:layout_constraintEnd_toEndOf="@+id/foodItemNameIcon"
+        app:layout_constraintStart_toEndOf="@+id/viewBackground"
+        app:layout_constraintTop_toTopOf="@+id/easyText" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/view_icon_button"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/recommendationBackground"
+        app:layout_constraintStart_toStartOf="@+id/recommendationBackground"
+        app:layout_constraintTop_toBottomOf="@+id/easyText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

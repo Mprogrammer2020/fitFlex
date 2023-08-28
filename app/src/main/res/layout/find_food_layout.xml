@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/blueRoundBackgound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/blue_round_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/foodItemsImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/burger_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/blueRoundBackgound" />
+
+    <TextView
+        android:id="@+id/breakfastText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Breakfast"
+        android:textColor="@color/lightBlack"
+        android:textSize="12sp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="42dp"
+        app:layout_constraintTop_toBottomOf="@+id/foodItemsImg" />
+
+    <TextView
+        android:id="@+id/allFoodTypesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="120+ foods"
+        android:textColor="@color/grey"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/breakfastText"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastText" />
+
+    <ImageView
+        android:id="@+id/selectImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blue_select_icon"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/breakfastText"
+        app:layout_constraintTop_toBottomOf="@+id/allFoodTypesText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

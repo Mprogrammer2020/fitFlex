@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/sliderImage"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:maxWidth="40dip"
+        android:src="@drawable/slider_first"/>
+
+    <TextView
+        android:id="@+id/titleSliderText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sliderImage"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/track_your_goal"
+        android:layout_marginHorizontal="25dp"
+        android:textSize="22sp"
+        android:textColor="@color/lightBlack"
+        android:layout_marginTop="55dp"/>
+
+    <TextView
+        android:id="@+id/descriptionSliderText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleSliderText"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/description"
+        android:layout_marginHorizontal="25dp"
+        android:textSize="14sp"
+        android:textColor="@color/grey"
+        android:layout_marginTop="9dp"/>
+
+</RelativeLayout>

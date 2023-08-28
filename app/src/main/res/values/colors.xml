@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="pale_blue">#9DCEFF</color>
+    <color name="light_blue">#92A3FD</color>
+    <color name="grey">#7B6F72</color>
+    <color name="progresColor">#F7F8F8</color>
+    <color name="lightBlack">#1D1617</color>
+    <color name="editTextBorder">#F7F8F8</color>
+    <color name="hintColor">#ADA4A5</color>
+    M<color name="viewColor">#DDDADA</color>
+    <color name="purpleStart">#C58BF2</color>
+    <color name="purpleEnd">#EEA4CE</color>
+    <color name="darkGrey">#A4A9AD</color>
+
+</resources>

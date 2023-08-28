@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/foodIcon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+        android:src="@drawable/homey_pan_icons"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/foodItemNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/warm_up"
+        android:textColor="@color/lightBlack"
+        android:textSize="12sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/foodIcon"
+        app:layout_constraintTop_toTopOf="@+id/foodIcon" />
+
+    <TextView
+        android:id="@+id/timesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_05_00am"
+        android:layout_marginTop="1dp"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/foodItemNameText"
+        app:layout_constraintTop_toBottomOf="@+id/foodItemNameText" />
+
+    <ImageView
+        android:id="@+id/forwardIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow__right_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/timesText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/foodItemNameText" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

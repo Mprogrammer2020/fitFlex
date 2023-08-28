@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="2dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numberText"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purpleStart"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="01"
+        />
+
+    <ImageView
+        android:id="@+id/radioIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/radio_icon"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numberText" />
+
+    <View
+        android:id="@+id/firstView"
+        android:layout_width="5dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        android:background="@drawable/vertical_dashed_line"
+        app:layout_constraintEnd_toEndOf="@+id/radioIcon"
+        app:layout_constraintStart_toStartOf="@+id/radioIcon"
+        app:layout_constraintTop_toBottomOf="@+id/radioIcon" />
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/lightBlack"
+        android:textSize="14sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Step 1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descriptioinText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/titleText"
+        app:layout_constraintStart_toStartOf="@+id/titleText"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        tools:text="Prepare all of the ingredients that needed" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
