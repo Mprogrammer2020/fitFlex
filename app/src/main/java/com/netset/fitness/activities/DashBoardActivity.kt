@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.netset.fitness.ProgressPhotoFragment
 import com.netset.fitness.fragments.MealPlannerFragment
 import com.netset.fitness.R
 import com.netset.fitness.databinding.ActivityDashBoardBinding
 import com.netset.fitness.fragments.HomeFragment
 import com.netset.fitness.fragments.ProfileFragment
+import com.netset.fitness.fragments.SleepTrackerFragment
 import com.netset.fitness.fragments.WorkoutTrackerFragment
 
 class DashBoardActivity : AppCompatActivity() {
@@ -38,7 +40,7 @@ class DashBoardActivity : AppCompatActivity() {
             binding.profileIcon.setImageResource(R.drawable.profile_icon)
 
 
-            changeFragment(MealPlannerFragment())
+            changeFragment(ProgressPhotoFragment())
 
         }
 

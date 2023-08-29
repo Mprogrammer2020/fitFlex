@@ -69,6 +69,12 @@ class WorkoutScheduleFragment : Fragment() {
         val adapter = CalendarWorkoutScheduleAdapter(requireContext(), calendarList)
         binding.calendarWorkoutScheduleRecyclerView.adapter = adapter
 
+        calendarListDataShow()
+
+    }
+
+    private fun calendarListDataShow() {
+        calendarTimeList.clear()
         calendarTimeList.add(WorkoutTimeScheduleDataItems("06:00 AM"))
         calendarTimeList.add(WorkoutTimeScheduleDataItems("07:00 AM"))
         calendarTimeList.add(WorkoutTimeScheduleDataItems("08:00 AM"))
@@ -86,10 +92,6 @@ class WorkoutScheduleFragment : Fragment() {
         binding.workoutTimeScheduleRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         val timeAdapter = WorkoutTimeScheduleAdapter(requireContext(), calendarTimeList )
         binding.workoutTimeScheduleRecyclerView.adapter = timeAdapter
-
-
-
-
     }
 
     private fun  updateTime(){

@@ -49,17 +49,14 @@ class MealPlannerFragment : Fragment() {
                 MealScheduleFragment(),R.id.dashboardContainerView,true)
 
         }
-
-        list.add(MealPlannerDataItems(R.drawable.nigiri_icon,"Salmon Nigiri","Today","7:00am",R.drawable.pink_notification_icon))
-        list.add(MealPlannerDataItems(R.drawable.glass_icon,"Lowfat Milk","Today","8:00am",R.drawable.grey_notification_icon))
-
+         mealPlannerDataShow()
+         foodListDataShow()
 
 
-        binding.mealPlannerRecyclerView.setHasFixedSize(true)
-        binding.mealPlannerRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val adapter = MealPlannerAdapter(requireContext(), list)
-        binding.mealPlannerRecyclerView.adapter = adapter
+    }
 
+    private fun foodListDataShow() {
+        foodList.clear()
         foodList.add(FindFoodDataItems(R.drawable.burger_icon,"Breakfast","120+ foods",R.drawable.blue_select_icon))
         foodList.add(FindFoodDataItems(R.drawable.burger_icon,"Launch","320+ foods",R.drawable.pink_select_icon))
 
@@ -67,7 +64,17 @@ class MealPlannerFragment : Fragment() {
         binding.findSomethingFoodRecyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         val findFoodAdapter = FindFoodAdapter(requireContext(), foodList)
         binding.findSomethingFoodRecyclerView.adapter = findFoodAdapter
+    }
 
+    private fun mealPlannerDataShow() {
+        list.clear()
+        list.add(MealPlannerDataItems(R.drawable.nigiri_icon,"Salmon Nigiri","Today","7:00am",R.drawable.pink_notification_icon))
+        list.add(MealPlannerDataItems(R.drawable.glass_icon,"Lowfat Milk","Today","8:00am",R.drawable.grey_notification_icon))
+
+        binding.mealPlannerRecyclerView.setHasFixedSize(true)
+        binding.mealPlannerRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val adapter = MealPlannerAdapter(requireContext(), list)
+        binding.mealPlannerRecyclerView.adapter = adapter
 
     }
 

@@ -31,13 +31,14 @@ class ActivityTrackerFragment : Fragment() {
         binding.backIconBackground.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
+        LatestActivityDataShow()
 
+    }
+
+    private fun LatestActivityDataShow() {
+        list.clear()
         list.add(LatestActivityData(R.drawable.girls_shake_background,"Drinking 300ml Water","About 1 minutes ago"))
         list.add(LatestActivityData(R.drawable.girls_juice_background,"Eat Snack (Fitbar)","About 3 hours ago"))
-
-
-
-
         binding.latestActivityRecyclerView.setHasFixedSize(true)
         binding.latestActivityRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         val adapter = LatestActivityTrackerAdapter(requireContext(), list)

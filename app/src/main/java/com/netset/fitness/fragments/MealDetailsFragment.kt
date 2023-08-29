@@ -46,6 +46,7 @@ class MealDetailsFragment : Fragment() {
     }
 
     private fun timeLineStepsDataShow() {
+        timeLineStepList.clear()
         timeLineStepList.add(TimelineStepsDataItems("01","Step 1","Prepare all of the ingredients that needed"))
         timeLineStepList.add(TimelineStepsDataItems("02","Step 2","Mix flour, sugar, salt, and baking powder"))
         timeLineStepList.add(TimelineStepsDataItems("03","Step 3","In a seperate place, mix the eggs and liquid milk until blended"))
@@ -56,7 +57,7 @@ class MealDetailsFragment : Fragment() {
 
     private fun nutritionDataShow() {
 
-
+        nutritionList.clear()
         nutritionList.add(NutritionDataItems(
             R.drawable.nutrition_background,
             R.drawable.calories_icon,"120kCal"))
@@ -74,7 +75,7 @@ class MealDetailsFragment : Fragment() {
     }
 
     private fun intgredientsDataShow() {
-
+        ingredientsList.clear()
         ingredientsList.add(IngredientsDataItems(R.drawable.flour_icon,"Wheat Flour","12g"))
         ingredientsList.add(IngredientsDataItems(R.drawable.sugar_icon,"Sugar","3 tbsp"))
         ingredientsList.add(IngredientsDataItems(R.drawable.baking_icon,"Baking Soda","2 tsp"))

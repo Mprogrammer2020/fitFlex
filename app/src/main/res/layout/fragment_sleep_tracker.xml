@@ -15,12 +15,15 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sleepTrackerToolbar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:paddingBottom="30dp"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
 
             <ImageView
@@ -68,6 +71,17 @@
                 app:layout_constraintStart_toStartOf="@+id/nightSleepText"
                 app:layout_constraintTop_toBottomOf="@+id/nightSleepText" />
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sleep_graph_icon"
+                android:scaleType="fitXY"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/sleepTrackerBackground"
+                app:layout_constraintTop_toBottomOf="@+id/timeText" />
+
 
             <ImageView
                 android:id="@+id/dailySleepScheduleBackground"
@@ -85,7 +99,7 @@
                 android:id="@+id/dailySleepText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Daily Sleep Schedule"
+                android:text="@string/daily_sleep_schedule"
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/poppins_medium"
                 android:textColor="@color/lightBlack"
@@ -110,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Today Schedule"
+                android:text="@string/today_schedule"
                 android:layout_marginTop="24dp"
                 android:textColor="@color/lightBlack"
                 android:textSize="15sp"
@@ -121,6 +135,10 @@
                 android:id="@+id/todayScheduleRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:clipToPadding="false"
+                android:paddingTop="2dp"
+                android:nestedScrollingEnabled="false"
                 app:layout_constraintTop_toBottomOf="@+id/todayScheduleText"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

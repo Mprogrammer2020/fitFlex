@@ -71,7 +71,7 @@ class MealScheduleFragment : Fragment() {
     }
 
     private fun mealNutritionDataShow() {
-
+        mealNutritionList.clear()
         mealNutritionList.add(MealNutritionDataItem("Calories", R.drawable.calories_icon,"320 kCal"))
         mealNutritionList.add(MealNutritionDataItem("Proteins", R.drawable.proteins_icon,"320g"))
         mealNutritionList.add(MealNutritionDataItem("Fat", R.drawable.egg_icon,"320 kCal"))
@@ -84,7 +84,7 @@ class MealScheduleFragment : Fragment() {
     }
 
     private fun foodTypeDataShow() {
-
+        foodTypeList.clear()
         foodTypeList.add(FoodTypeDataItems("Breakfast","2 meals","230 calories", arrayListOf(
             FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.homey_pan_icons,"Honey pancake","07:00am"),
             FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.coffee_icons,"Coffee","07:30am"), )))

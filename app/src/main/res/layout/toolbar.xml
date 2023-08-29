@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingBottom="2dp"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -38,6 +40,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/backIconBackground" />
+
+    <ImageView
+        android:id="@+id/shareIconBackground"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="invisible"
+        android:background="@drawable/rectangle_background"
+        app:layout_constraintBottom_toBottomOf="@+id/dotIconBackground"
+        app:layout_constraintEnd_toStartOf="@+id/dotIconBackground"
+        app:layout_constraintTop_toTopOf="@+id/dotIconBackground" />
+
+    <ImageView
+        android:id="@+id/shareIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/share_icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/shareIconBackground"
+        app:layout_constraintEnd_toEndOf="@+id/shareIconBackground"
+        app:layout_constraintStart_toStartOf="@+id/shareIconBackground"
+        app:layout_constraintTop_toTopOf="@+id/shareIconBackground" />
 
 
     <ImageView

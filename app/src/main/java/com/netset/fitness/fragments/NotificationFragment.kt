@@ -15,7 +15,6 @@ import com.netset.models.NotificationData
 
 class NotificationFragment : Fragment() {
     private  lateinit var binding:FragmentNotificationBinding
-    private lateinit var dashBoardActivity:DashBoardActivity
     private var list:ArrayList<NotificationData> = ArrayList()
 
 
@@ -28,19 +27,25 @@ class NotificationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        dashBoardActivity.showHideBottomBar(false)
+        (activity as DashBoardActivity?)?.showHideBottomBar(false)
 
-         binding.backIconBackground.setOnClickListener {
+
+        binding.backIconBackground.setOnClickListener {
              requireActivity().onBackPressedDispatcher.onBackPressed()
          }
+
+        notificationDataShow()
+
+    }
+
+    private fun notificationDataShow() {
+        list.clear()
         list.add(NotificationData(R.drawable.meal_background,"Hey, it’s time for lunch","About 1 minutes ago"))
         list.add(NotificationData(R.drawable.girl_gym_background,"Don’t miss your lowerbody workout","About 3 hours ago"))
         list.add(NotificationData(R.drawable.meal_background,"Hey, let’s add some meals for your b..","About 3 hours ago"))
         list.add(NotificationData(R.drawable.gym_boy_background,"Congratulations, You have finished A..","29 May"))
         list.add(NotificationData(R.drawable.girl_gym_background,"Hey, it’s time for lunch","29 April"))
         list.add(NotificationData(R.drawable.gym_boy_background,"Ups, You have missed your Lowerbo...","29 May"))
-
-
 
         binding.notificationRecyclerView.setHasFixedSize(true)
         binding.notificationRecyclerView.layoutManager = LinearLayoutManager(requireContext())

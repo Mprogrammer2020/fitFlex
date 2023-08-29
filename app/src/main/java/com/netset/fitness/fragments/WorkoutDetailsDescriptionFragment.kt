@@ -39,20 +39,12 @@ class WorkoutDetailsDescriptionFragment : Fragment() {
                 R.id.dashboardContainerView,true)
         }
 
-        list.add(TimeLineDataItems("01","Spread Your Arms","To make the gestures feel more relaxed, stretch your arms as you start this movement. No bending of hands."))
-        list.add(TimeLineDataItems("02","Rest at The Toe","The basis of this movement is jumping. Now, what needs to be considered is that you have to use the tips of your feet"))
-        list.add(TimeLineDataItems("03","Adjust Foot Movement","Jumping Jack is not just an ordinary jump. But, you also have to pay close attention to leg movements."))
-        binding.timelineRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val trainingAdapter = TimeLineAdapter(requireContext(),list)
-        binding.timelineRecyclerView.adapter = trainingAdapter
-
+        timeLineDataShow()
 
         binding.caloriesBurnPicker.maxValue = 4
         binding.caloriesBurnPicker.minValue = 0
         val pickerVals = arrayOf<String>("450 Calories Burn", "450 Calories Burn", "450 Calories Burn", "450 Calories Burn", "450 Calories Burn")
         binding.caloriesBurnPicker.displayedValues = pickerVals
-
-
 
 
         binding.caloriesBurnPicker.setOnValueChangedListener(OnValueChangeListener { numberPicker, i, i1 ->
@@ -69,5 +61,15 @@ class WorkoutDetailsDescriptionFragment : Fragment() {
 
 
 
+    }
+
+    private fun timeLineDataShow() {
+        list.clear()
+        list.add(TimeLineDataItems("01","Spread Your Arms","To make the gestures feel more relaxed, stretch your arms as you start this movement. No bending of hands."))
+        list.add(TimeLineDataItems("02","Rest at The Toe","The basis of this movement is jumping. Now, what needs to be considered is that you have to use the tips of your feet"))
+        list.add(TimeLineDataItems("03","Adjust Foot Movement","Jumping Jack is not just an ordinary jump. But, you also have to pay close attention to leg movements."))
+        binding.timelineRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val trainingAdapter = TimeLineAdapter(requireContext(),list)
+        binding.timelineRecyclerView.adapter = trainingAdapter
     }
 }

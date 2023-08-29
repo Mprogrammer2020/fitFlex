@@ -44,17 +44,12 @@ class WorkoutDetailsFragment : Fragment() {
                 WorkoutDetailsDescriptionFragment(), R.id.dashboardContainerView,true)
         }
 
-        list.add(GymItems(R.drawable.barbel,"Barbell"))
-        list.add(GymItems(R.drawable.skipping_rope,"Skipping Rope"))
-        list.add(GymItems(R.drawable.barbel,"Barbell"))
-        list.add(GymItems(R.drawable.skipping_rope,"Skipping Rope"))
-        binding.gymItemsRecyclerView.setHasFixedSize(true)
-        binding.gymItemsRecyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
-        val trainingAdapter = GymItemsAdapter(requireContext(), list)
-        binding.gymItemsRecyclerView.adapter = trainingAdapter
+        gymItemsDataShow()
+        exerciseSetsItemsDataShow()
 
+    }
 
-
+    private fun exerciseSetsItemsDataShow() {
         exerciseSetsItems.add(ExerciseSetItems("Sets 1", arrayListOf<ExerciseSetItems.NestedExerciseSetsItems>(
             ExerciseSetItems.NestedExerciseSetsItems(R.drawable.exercises_sets,"Warm Up","05:00"),
             ExerciseSetItems.NestedExerciseSetsItems(R.drawable.jumping_icon,"Jumping Jack","12x"),
@@ -73,5 +68,17 @@ class WorkoutDetailsFragment : Fragment() {
         binding.exerciseSetsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         val exerciseSetsAdapter = ExerciseSetsAdapter(requireContext(), exerciseSetsItems)
         binding.exerciseSetsRecyclerView.adapter = exerciseSetsAdapter
+    }
+
+    private fun gymItemsDataShow() {
+        list.clear()
+        list.add(GymItems(R.drawable.barbel,"Barbell"))
+        list.add(GymItems(R.drawable.skipping_rope,"Skipping Rope"))
+        list.add(GymItems(R.drawable.barbel,"Barbell"))
+        list.add(GymItems(R.drawable.skipping_rope,"Skipping Rope"))
+        binding.gymItemsRecyclerView.setHasFixedSize(true)
+        binding.gymItemsRecyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+        val trainingAdapter = GymItemsAdapter(requireContext(), list)
+        binding.gymItemsRecyclerView.adapter = trainingAdapter
     }
 }

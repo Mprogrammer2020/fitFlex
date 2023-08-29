@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProgressPhotoFragment">
+
+   <include
+       android:id="@+id/progressPhotoToolbar"
+       layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressPhotoToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+
+            <ImageView
+                android:id="@+id/reminderBackgroundImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/reminder_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/clockCalendarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:src="@drawable/reminder_white_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/reminderBackgroundImg"
+                app:layout_constraintStart_toStartOf="@+id/reminderBackgroundImg"
+                app:layout_constraintTop_toTopOf="@+id/reminderBackgroundImg" />
+
+            <ImageView
+                android:id="@+id/closeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/close"
+                app:layout_constraintEnd_toEndOf="@+id/reminderBackgroundImg"
+                app:layout_constraintTop_toTopOf="@+id/reminderBackgroundImg" />
+
+            <ImageView
+                android:id="@+id/progressBackgroundImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/progress_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reminderBackgroundImg" />
+
+            <ImageView
+                android:id="@+id/learnMoreIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/learn_more_icon"
+                app:layout_constraintStart_toStartOf="@+id/ProgressMonthPhotoText"
+                app:layout_constraintTop_toBottomOf="@+id/ProgressMonthPhotoText" />
+
+            <ImageView
+                android:id="@+id/calendarBoyImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/calendar_boy_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBackgroundImg"
+                app:layout_constraintEnd_toEndOf="@+id/progressBackgroundImg"
+                app:layout_constraintTop_toTopOf="@+id/progressBackgroundImg" />
+
+            <ImageView
+                android:id="@+id/comparePhotoBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/target_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBackgroundImg" />
+
+
+            <ImageView
+                android:id="@+id/checkIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/check_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/comparePhotoText"
+                app:layout_constraintEnd_toEndOf="@+id/comparePhotoBackground"
+                app:layout_constraintTop_toTopOf="@+id/comparePhotoText" />
+
+
+            <TextView
+                android:id="@+id/reminderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/reminder"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/clockCalendarIcon"
+                app:layout_constraintTop_toTopOf="@+id/clockCalendarIcon" />
+
+
+            <TextView
+                android:id="@+id/nextPhotosText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/next_photos_fall_on_july_08"
+                android:textColor="@color/lightBlack"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/reminderText"
+                app:layout_constraintTop_toBottomOf="@+id/reminderText" />
+
+            <TextView
+                android:id="@+id/ProgressMonthPhotoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/track_your_progress_each_month_with_photo"
+                android:textColor="@color/lightBlack"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/clockCalendarIcon"
+                app:layout_constraintTop_toTopOf="@+id/progressBackgroundImg" />
+
+
+            <TextView
+                android:id="@+id/comparePhotoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/compare_my_photo"
+                android:textColor="@color/lightBlack"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/comparePhotoBackground"
+                app:layout_constraintStart_toStartOf="@+id/comparePhotoBackground"
+                app:layout_constraintTop_toTopOf="@+id/comparePhotoBackground" />
+
+            <TextView
+                android:id="@+id/galleryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/gallery"
+                android:textColor="@color/lightBlack"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/comparePhotoBackground"
+                app:layout_constraintTop_toBottomOf="@+id/comparePhotoBackground" />
+
+            <TextView
+                android:id="@+id/seeMoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/see_more"
+                android:textColor="@color/hintColor"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/galleryText"
+                app:layout_constraintEnd_toEndOf="@+id/comparePhotoBackground"
+                app:layout_constraintTop_toTopOf="@+id/galleryText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/galleryRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/seeMoreText"
+                app:layout_constraintStart_toStartOf="@+id/galleryText"
+                app:layout_constraintTop_toBottomOf="@+id/galleryText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_pink_icon"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

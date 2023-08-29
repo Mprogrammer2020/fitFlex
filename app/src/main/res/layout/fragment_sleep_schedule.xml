@@ -1,14 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.SleepScheduleFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <include
+        android:id="@+id/sleepScheduleToolbar"
+        layout="@layout/toolbar"/>
 
-</FrameLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/sleepScheduleToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="30dp"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/hourSleepBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/hours_sleep_background"/>
+
+            <TextView
+                android:id="@+id/hoursSleepText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/ideal_hours_for_sleep"
+                android:textColor="@color/lightBlack"
+                android:textSize="12sp"
+                android:layout_marginTop="23dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="@+id/hourSleepBackground"
+                app:layout_constraintTop_toTopOf="@+id/hourSleepBackground" />
+
+            <TextView
+                android:id="@+id/hoursMinutesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/_8hours_30minutes"
+                android:textColor="@color/light_blue"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/hoursSleepText"
+                app:layout_constraintTop_toBottomOf="@+id/hoursSleepText" />
+
+            <ImageView
+                android:id="@+id/learnMoreIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/learn_more_icon"
+                android:layout_marginTop="14dp"
+                app:layout_constraintStart_toStartOf="@+id/hoursMinutesText"
+                app:layout_constraintTop_toBottomOf="@+id/hoursMinutesText" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/moon_sleep_icon"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/learnMoreIcon"
+                app:layout_constraintEnd_toEndOf="@+id/hourSleepBackground" />
+
+            <TextView
+                android:id="@+id/todayScheduleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/your_schedule"
+                android:textColor="@color/lightBlack"
+                android:textSize="15sp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="@+id/hourSleepBackground"
+                app:layout_constraintTop_toBottomOf="@+id/hourSleepBackground" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/todayScheduleRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/todayScheduleText"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sleepScheduleRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="false"
+                android:paddingTop="6dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/todayScheduleRecyclerView"/>
+
+
+
+
+            <ImageView
+                android:id="@+id/lightPinkBackgroundIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/light_pink_background"
+                android:layout_marginHorizontal="22dp"
+                app:layout_constraintTop_toBottomOf="@+id/sleepScheduleRecyclerView"/>
+
+
+            <TextView
+                android:id="@+id/hoursMinutesDescriptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/you_will_get_8hours_10minutes_for_tonight"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/poppins_medium"
+                app:layout_constraintStart_toStartOf="@+id/lightPinkBackgroundIcon"
+                app:layout_constraintTop_toTopOf="@+id/lightPinkBackgroundIcon" />
+
+            <ProgressBar
+                android:id="@+id/loading"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="10dp"
+                android:progress="96"
+                android:layout_marginEnd="30dp"
+                android:progressDrawable="@drawable/horizontal_progressbar_pink"
+                app:layout_constraintEnd_toEndOf="@+id/lightPinkBackgroundIcon"
+                app:layout_constraintStart_toStartOf="@+id/hoursMinutesDescriptionText"
+                app:layout_constraintTop_toBottomOf="@+id/hoursMinutesDescriptionText"
+                />
+
+            <TextView
+                android:id="@+id/percentageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/_96"
+                android:textColor="@color/white"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/loading"
+                app:layout_constraintEnd_toEndOf="@+id/loading"
+                app:layout_constraintStart_toStartOf="@+id/loading"
+                app:layout_constraintTop_toTopOf="@+id/loading" />
+
+            <ImageView
+                android:id="@+id/add_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pink_add_icon"
+                android:layout_marginTop="6dp"
+                app:layout_constraintEnd_toEndOf="@+id/lightPinkBackgroundIcon"
+                app:layout_constraintTop_toTopOf="@+id/loading" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

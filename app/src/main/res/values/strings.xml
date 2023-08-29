@@ -120,5 +120,37 @@
     <string name="_2_meals">2 meals</string>
     <string name="_30mins">30mins</string>
     <string name="_05_00am">05:00am</string>
+    <string name="bedtime">BedTime</string>
+    <string name="_09_00_pm">09:00 PM</string>
+    <string name="hours_of_sleep">Hours of Sleep</string>
+    <string name="_8hours_30minutes">8hours 30minutes</string>
+    <string name="repeat">Repeat</string>
+    <string name="mon_to_fri">Mon to Fri</string>
+    <string name="vibrate_when_alarm_sound">vibrate When Alarm Sound</string>
+    <string name="save">Save</string>
+    <string name="in_14hours_30minutes">in 14hours 30minutes</string>
+    <string name="ideal_hours_for_sleep">Ideal Hours for Sleep</string>
+    <string name="today_schedule">Today Schedule</string>
+    <string name="your_schedule">Your Schedule</string>
+    <string name="mon">Mon</string>
+    <string name="_12">12</string>
+    <string name="you_will_get_8hours_10minutes_for_tonight">You will get 8hours 10minutes \nfor tonight</string>
+    <string name="_96">96%</string>
+    <string name="bedtimes">Bedtime,</string>
+    <string name="_09_00pm">09:00pm</string>
+    <string name="reminder">Reminder!</string>
+    <string name="next_photos_fall_on_july_08">Next Photos Fall On July 08</string>
+    <string name="track_your_progress_each_month_with_photo">Track Your Progress Each \nMonth With Photo</string>
+    <string name="daily_sleep_schedule">Daily Sleep Schedule</string>
+    <string name="compare_my_photo">Compare my Photo</string>
+    <string name="gallery">Gallery</string>
+    <string name="_2_june">2 June</string>
+    <string name="choose_month_1">Choose Month 1</string>
+    <string name="may">May</string>
+    <string name="select_month">Select Month</string>
+    <string name="average_progress">Average Progress</string>
+    <string name="_62">62%</string>
+    <string name="june">June</string>
+    <string name="front_facing">Front Facing</string>
 
 </resources>

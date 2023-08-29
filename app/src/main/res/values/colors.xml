@@ -13,5 +13,7 @@
     <color name="purpleStart">#C58BF2</color>
     <color name="purpleEnd">#EEA4CE</color>
     <color name="darkGrey">#A4A9AD</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#42D742</color>
 
 </resources>

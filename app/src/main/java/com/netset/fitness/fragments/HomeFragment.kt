@@ -44,6 +44,7 @@ class HomeFragment : Fragment() {
             CommonFunction.openFragment(requireActivity().supportFragmentManager, ActivityTrackerFragment(),R.id.dashboardContainerView,true)
 
         }
+        list.clear()
         list.add(LatestWorkoutItems("Fullbody Workout","180 Calories Burn","20minutes",R.drawable.running_boy_background))
         list.add(LatestWorkoutItems("Loverbody Workout","200 Calories Burn","30minutes",R.drawable.girl_gym_background))
         list.add(LatestWorkoutItems("Ab Workout","180 Calories Burn","40minutes",R.drawable.gym_boy_background))

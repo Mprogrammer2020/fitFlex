@@ -36,15 +36,15 @@ class WorkoutTrackerFragment : Fragment() {
 
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
 
-        list.add(UpcomingWorkoutItems(R.drawable.running_boy_background,"Fullbody Workout","Today, 03:00pm"))
-        list.add(UpcomingWorkoutItems(R.drawable.workout_pic,"Upperbody Workout","June 05, 02:00pm"))
-        binding.upcomingWorkoutRecyclerView.setHasFixedSize(true)
-        binding.upcomingWorkoutRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val adapter = UpcomingWorkoutAdapter(requireContext(), list)
-        binding.upcomingWorkoutRecyclerView.adapter = adapter
+        upcomingWorkoutRecyclerViewDataShow()
+        workoutTrainingRecyclerViewDataShow()
 
 
 
+    }
+
+    private fun workoutTrainingRecyclerViewDataShow() {
+        workoutTrainingList.clear()
         workoutTrainingList.add(WorkoutTrainingItems("Fullbody Workout","11 Exercise","32mins",R.drawable.rope_jump))
         workoutTrainingList.add(WorkoutTrainingItems("Loverbody Workout","12 Exercise","30mins",R.drawable.lowebody_workout))
         workoutTrainingList.add(WorkoutTrainingItems("Fullbody Workout","15 Exercise","39mins",R.drawable.ab_workout))
@@ -53,6 +53,16 @@ class WorkoutTrackerFragment : Fragment() {
         val trainingAdapter = WorkoutTrainingAdapter(requireContext(), workoutTrainingList)
         binding.workoutTrainingRecyclerView.adapter = trainingAdapter
 
+    }
+
+    private fun upcomingWorkoutRecyclerViewDataShow() {
+        list.clear()
+        list.add(UpcomingWorkoutItems(R.drawable.running_boy_background,"Fullbody Workout","Today, 03:00pm"))
+        list.add(UpcomingWorkoutItems(R.drawable.workout_pic,"Upperbody Workout","June 05, 02:00pm"))
+        binding.upcomingWorkoutRecyclerView.setHasFixedSize(true)
+        binding.upcomingWorkoutRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val adapter = UpcomingWorkoutAdapter(requireContext(), list)
+        binding.upcomingWorkoutRecyclerView.adapter = adapter
     }
 
 

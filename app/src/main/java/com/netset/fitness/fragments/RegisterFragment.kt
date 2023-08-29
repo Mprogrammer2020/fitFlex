@@ -81,9 +81,6 @@ class RegisterFragment : Fragment() {
         binding.termsAndConditionText.text = spannable
         binding.termsAndConditionText.highlightColor = Color.TRANSPARENT
         binding.termsAndConditionText.movementMethod = LinkMovementMethod.getInstance()
-
-
-
             spanableString()
     }
 
