@@ -9,16 +9,64 @@
     tools:context=".fragments.MealDetailsFragment">
 
 
-    <include
-        android:id="@+id/mealDetailsToolbar"
-        layout="@layout/toolbar"/>
+
+
+    <ImageView
+        android:id="@+id/backIconBackground"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="@drawable/rectangle_background"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/backIconBackground"
+        app:layout_constraintEnd_toEndOf="@+id/backIconBackground"
+        app:layout_constraintStart_toStartOf="@+id/backIconBackground"
+        app:layout_constraintTop_toTopOf="@+id/backIconBackground" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pancake_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/backIconBackground"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/dotIconBackground"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/rectangle_background"
+        app:layout_constraintBottom_toBottomOf="@+id/backIconBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backIconBackground" />
+
+    <ImageView
+        android:id="@+id/dotIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dot_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/dotIconBackground"
+        app:layout_constraintEnd_toEndOf="@+id/dotIconBackground"
+        app:layout_constraintStart_toStartOf="@+id/dotIconBackground"
+        app:layout_constraintTop_toTopOf="@+id/dotIconBackground" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/corner_layout"
-        android:layout_marginTop="290dp">
+        android:layout_marginTop="300dp">
 
         <ImageView
             android:id="@+id/swapIcon"

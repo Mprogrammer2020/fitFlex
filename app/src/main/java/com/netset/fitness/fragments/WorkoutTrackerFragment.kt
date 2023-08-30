@@ -34,7 +34,7 @@ class WorkoutTrackerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as DashBoardActivity?)?.showHideBottomBar(false)
+        (activity as DashBoardActivity?)?.showHideBottomBar(true)
 
         upcomingWorkoutRecyclerViewDataShow()
         workoutTrainingRecyclerViewDataShow()

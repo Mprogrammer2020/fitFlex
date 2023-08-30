@@ -3,6 +3,7 @@ package com.netset.fitness.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.netset.fitness.ProgressPhotoFragment
 import com.netset.fitness.fragments.MealPlannerFragment
@@ -12,6 +13,7 @@ import com.netset.fitness.fragments.HomeFragment
 import com.netset.fitness.fragments.ProfileFragment
 import com.netset.fitness.fragments.SleepTrackerFragment
 import com.netset.fitness.fragments.WorkoutTrackerFragment
+import com.netset.fitness.utils.CommonFunction
 
 class DashBoardActivity : AppCompatActivity() {
     private lateinit var binding:ActivityDashBoardBinding
@@ -22,34 +24,33 @@ class DashBoardActivity : AppCompatActivity() {
 
 
         changeFragment(HomeFragment())
+        binding.bottomBar.selectedItemId=R.id.homeIcon
 
 
-        binding.homeIcon.setOnClickListener {
-            changeFragment(HomeFragment())
 
+        binding.bottomBar.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.homeIcon -> {
+                    changeFragment(HomeFragment())
+
+                }
+
+                R.id.activityIcon -> {
+                    changeFragment(WorkoutTrackerFragment())
+                }
+
+                R.id.cameraIcon -> {
+                changeFragment(ProgressPhotoFragment())
+
+                }
+                R.id.profileIcon -> {
+                    changeFragment(ProfileFragment())
+                }
+            }
+            true
         }
 
-        binding.activityIcon.setOnClickListener {
-            changeFragment(WorkoutTrackerFragment())
 
-        }
-
-        binding.cameraIcon.setOnClickListener {
-
-            binding.cameraIcon.setImageResource(R.drawable.camera_active)
-            binding.profileIcon.setImageResource(R.drawable.profile_icon)
-
-
-            changeFragment(ProgressPhotoFragment())
-
-        }
-
-        binding.profileIcon.setOnClickListener {
-            binding.profileIcon.setImageResource(R.drawable.profile_active)
-            binding.cameraIcon.setImageResource(R.drawable.camera_icon)
-
-            changeFragment(ProfileFragment())
-        }
     }
     private fun changeFragment(fragment:Fragment) {
         val transaction = supportFragmentManager.beginTransaction().replace(R.id.dashboardContainerView,fragment)
@@ -58,11 +59,14 @@ class DashBoardActivity : AppCompatActivity() {
 
     fun showHideBottomBar(status:Boolean){
         if (!status){
-            binding.constraintLayout.visibility = View.GONE
+            binding.bottomBar.visibility = View.GONE
+            binding.fab.visibility=View.GONE
             binding.searchIcon.visibility=View.GONE
+
         }
         else{
-            binding.constraintLayout.visibility = View.VISIBLE
+            binding.bottomBar.visibility = View.VISIBLE
+            binding.fab.visibility=View.VISIBLE
             binding.searchIcon.visibility=View.VISIBLE
 
         }

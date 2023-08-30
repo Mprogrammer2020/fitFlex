@@ -2,6 +2,7 @@ package com.netset.fitness.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.netset.fitness.databinding.NotificationLayoutBinding
@@ -24,6 +25,14 @@ class NotificationAdapter(private val context: Context, private val notification
         holder.binding.backgroundImg.setImageResource(notificationsItems[position].imageBackground)
         holder.binding.notificationTitleText.text=notificationsItems[position].title
         holder.binding.aboutText.text=notificationsItems[position].minutesAndHour
+
+        if (position==notificationsItems.size-1)
+        {
+            holder.binding.view.visibility=View.GONE
+        }else{
+            holder.binding.view.visibility=View.VISIBLE
+
+        }
 
 
     }

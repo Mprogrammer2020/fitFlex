@@ -37,12 +37,19 @@ class HomeFragment : Fragment() {
 
         }
 
+        binding.waterIntakeCardView.setOnClickListener {
+            CommonFunction.openFragment(requireActivity().supportFragmentManager, MealPlannerFragment(),R.id.dashboardContainerView,true)
+
+        }
+
+        binding.sleepCardView.setOnClickListener {
+            CommonFunction.openFragment(requireActivity().supportFragmentManager, SleepTrackerFragment(),R.id.dashboardContainerView,true)
+
+        }
+
 
         binding.checkIcon.setOnClickListener {
-
-
             CommonFunction.openFragment(requireActivity().supportFragmentManager, ActivityTrackerFragment(),R.id.dashboardContainerView,true)
-
         }
         list.clear()
         list.add(LatestWorkoutItems("Fullbody Workout","180 Calories Burn","20minutes",R.drawable.running_boy_background))

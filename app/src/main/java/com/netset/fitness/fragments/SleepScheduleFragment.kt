@@ -48,6 +48,11 @@ class SleepScheduleFragment : Fragment() {
 
         binding.sleepScheduleToolbar.fragmentsText.text="Sleep Schedule"
 
+
+        binding.sleepScheduleToolbar.backIconBackground.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+
         binding.addIcon.setOnClickListener {
             CommonFunction.openFragment(requireActivity().supportFragmentManager,AddAlarmFragment(),R.id.dashboardContainerView,true)
         }

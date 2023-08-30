@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.netset.fitness.activities.DashBoardActivity
 import com.netset.fitness.databinding.FragmentComparisonBinding
 import com.netset.fitness.databinding.NestedGalleryLayoutBinding
 import com.netset.fitness.utils.CommonFunction
@@ -21,7 +22,13 @@ class ComparisonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        (activity as DashBoardActivity?)?.showHideBottomBar(false)
+
+
         binding.comparisonToolbar.fragmentsText.text="Comparison"
+        binding.comparisonToolbar.backIconBackground.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
 
         binding.compareButton.setOnClickListener {
             CommonFunction.openFragment(requireActivity().supportFragmentManager,ResultFragment(),R.id.dashboardContainerView,true)

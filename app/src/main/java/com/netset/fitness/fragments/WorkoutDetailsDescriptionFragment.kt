@@ -32,6 +32,13 @@ class WorkoutDetailsDescriptionFragment : Fragment() {
 
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
 
+        binding.workDetailsDescriptionToolbar.fragmentsText.text=""
+
+        binding.workDetailsDescriptionToolbar.backIcon.setImageResource(R.drawable.close)
+
+        binding.workDetailsDescriptionToolbar.backIconBackground.setOnClickListener {
+         requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
 
         binding.saveButton.setOnClickListener {
             CommonFunction.openFragment(requireActivity().supportFragmentManager,

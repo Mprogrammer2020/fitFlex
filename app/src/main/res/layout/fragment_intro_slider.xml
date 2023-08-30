@@ -42,11 +42,12 @@
     <ImageView
         android:layout_width="18dp"
         android:layout_height="18dp"
-        android:src="@drawable/arrow_right"
+        android:src="@drawable/arrow_right_white_icon"
         android:layout_marginStart="2dp"
         app:layout_constraintBottom_toBottomOf="@+id/circleBackgroundImage"
         app:layout_constraintEnd_toEndOf="@+id/circleBackgroundImage"
         app:layout_constraintStart_toStartOf="@+id/circleBackgroundImage"
-        app:layout_constraintTop_toTopOf="@+id/circleBackgroundImage" />
+        app:layout_constraintTop_toTopOf="@+id/circleBackgroundImage"
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

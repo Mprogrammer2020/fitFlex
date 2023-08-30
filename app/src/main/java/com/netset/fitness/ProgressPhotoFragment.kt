@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.netset.fitness.activities.DashBoardActivity
 import com.netset.fitness.adapters.FoodTypeAdapter
 import com.netset.fitness.adapters.GalleryAdapter
 import com.netset.fitness.databinding.FragmentProgressPhotoBinding
@@ -28,16 +29,25 @@ class ProgressPhotoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        (activity as DashBoardActivity?)?.showHideBottomBar(true)
+
+
         binding.progressPhotoToolbar.fragmentsText.text="Progress Photo"
 
         binding.checkIcon.setOnClickListener {
             CommonFunction.openFragment(requireActivity().supportFragmentManager,ComparisonFragment(),R.id.dashboardContainerView,true)
         }
 
+        binding.cameraIcon.setOnClickListener {
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,TakePhotoFragment(),R.id.dashboardContainerView,true)
+
+        }
+
         galleryDataShow()
     }
 
     private fun galleryDataShow() {
+        galleryList.clear()
         galleryList.add(
                 GalleryDataItems("2 June", arrayListOf(
                 GalleryDataItems.NestedGalleryDataItems(R.drawable.gym_icon),

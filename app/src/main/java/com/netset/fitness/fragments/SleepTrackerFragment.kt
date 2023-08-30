@@ -35,6 +35,10 @@ class SleepTrackerFragment : Fragment() {
 
         binding.sleepTrackerToolbar.fragmentsText.text="Sleep Tracker"
 
+        binding.sleepTrackerToolbar.backIconBackground.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+
         binding.checkIcon.setOnClickListener {
             CommonFunction.openFragment(requireActivity().supportFragmentManager,SleepScheduleFragment(),R.id.dashboardContainerView,true)
         }

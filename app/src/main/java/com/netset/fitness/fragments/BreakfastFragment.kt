@@ -39,6 +39,10 @@ class BreakfastFragment : Fragment() {
 
         binding.breakfastToolbar.fragmentsText.text="Breakfast"
 
+        binding.breakfastToolbar.backIconBackground.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+
         categoryDataShow()
         recommendationDataShow()
         popularDataShow()

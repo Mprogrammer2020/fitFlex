@@ -21,6 +21,10 @@ class AddAlarmFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.addAlarmToolbar.fragmentsText.text="Add Alarm"
+
+        binding.addAlarmToolbar.backIconBackground.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
     }
 
 }

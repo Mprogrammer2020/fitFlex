@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
+    android:paddingEnd="14dp"
     android:layout_height="wrap_content">
 
     <ImageView
@@ -11,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
-        android:src="@drawable/blue_round_icon"
+        android:src="@drawable/blue_corner_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,8 +23,9 @@
         android:layout_height="wrap_content"
         android:src="@drawable/burger_icon"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="12dp"
+
         app:layout_constraintEnd_toEndOf="@+id/blueRoundBackgound" />
 
     <TextView
@@ -46,6 +48,7 @@
         android:fontFamily="@font/poppins_regular"
         android:text="120+ foods"
         android:textColor="@color/grey"
+        android:layout_marginTop="2dp"
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="@+id/breakfastText"
         app:layout_constraintTop_toBottomOf="@+id/breakfastText" />

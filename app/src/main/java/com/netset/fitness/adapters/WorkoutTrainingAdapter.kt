@@ -33,6 +33,7 @@ class WorkoutTrainingAdapter(private val context: Context, private val workoutTr
             val transaction =(context as AppCompatActivity).supportFragmentManager.beginTransaction().addToBackStack("")
                 .replace(R.id.dashboardContainerView, WorkoutDetailsFragment())
             transaction.commit()
+
         }
     }
 

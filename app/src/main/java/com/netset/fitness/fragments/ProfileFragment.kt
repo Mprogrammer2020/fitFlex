@@ -25,5 +25,7 @@ class ProfileFragment : Fragment() {
 
         (activity as DashBoardActivity?)?.showHideBottomBar(true)
 
+        binding.profileToolbar.fragmentsText.text="Profile"
+
     }
 }

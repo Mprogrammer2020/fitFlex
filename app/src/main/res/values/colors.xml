@@ -15,5 +15,6 @@
     <color name="darkGrey">#A4A9AD</color>
     <color name="red">#FF0000</color>
     <color name="green">#42D742</color>
+    <color name="transparent">#FFFFFFFF</color>
 
 </resources>

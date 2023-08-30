@@ -30,7 +30,7 @@ class NotificationFragment : Fragment() {
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
 
 
-        binding.backIconBackground.setOnClickListener {
+        binding.notificationToolbar.backIconBackground.setOnClickListener {
              requireActivity().onBackPressedDispatcher.onBackPressed()
          }
 

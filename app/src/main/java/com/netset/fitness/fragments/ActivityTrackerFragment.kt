@@ -28,7 +28,9 @@ class ActivityTrackerFragment : Fragment() {
 
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
 
-        binding.backIconBackground.setOnClickListener {
+        binding.activityTrackerToolbar.fragmentsText.text="Activity Tracker"
+
+        binding.activityTrackerToolbar.backIconBackground.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
         LatestActivityDataShow()

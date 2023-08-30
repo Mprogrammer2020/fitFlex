@@ -152,5 +152,11 @@
     <string name="_62">62%</string>
     <string name="june">June</string>
     <string name="front_facing">Front Facing</string>
+    <string name="meal_nutritions">Meal Nutritions</string>
+    <string name="daily_meal_schedule">Daily Meal Schedule</string>
+    <string name="today_meals">Today Meals</string>
+    <string name="find_something_to_eat">Find Something to Eat</string>
+    <string name="category">Category</string>
+    <string name="popular">Popular</string>
 
 </resources>

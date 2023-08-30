@@ -43,6 +43,10 @@ class WorkoutScheduleFragment : Fragment() {
 
         binding.workoutScheduleToolbar.fragmentsText.text="Workout Schedule"
 
+        binding.workoutScheduleToolbar.backIconBackground.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+
         binding.addIcon.setOnClickListener {
             CommonFunction.openFragment(requireActivity().supportFragmentManager,
                 AddScheduleFragment(), R.id.dashboardContainerView,true)

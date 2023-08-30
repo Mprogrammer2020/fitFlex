@@ -97,15 +97,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="@+id/detailsWorkoutText"
-                app:layout_constraintTop_toBottomOf="@+id/detailsWorkoutText" />
+                app:layout_constraintTop_toBottomOf="@+id/detailsWorkoutText"
+
+                />
 
             <ImageView
                 android:id="@+id/iconBarbel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_barbel"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="15dp"
                 app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
                 app:layout_constraintStart_toStartOf="@+id/chooseWorkoutImg"
                 app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
@@ -125,14 +126,14 @@
 
 
             <TextView
-                android:id="@+id/upperbodyWorkouotText"
+                android:id="@+id/timeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/upperbody_workout"
+                android:text="@string/_09_00_pm"
                 android:textColor="@color/hintColor"
                 android:textSize="10sp"
                 android:fontFamily="@font/poppins_regular"
-                android:layout_marginEnd="5dp"
+                android:layout_marginEnd="7dp"
                 app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
                 app:layout_constraintEnd_toStartOf="@+id/rightIcon"
                 app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
@@ -143,23 +144,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/arrow_right_icon"
-                android:layout_marginEnd="22dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
                 app:layout_constraintEnd_toEndOf="@+id/chooseWorkoutImg"
                 app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
 
-
             <ImageView
-                android:id="@+id/difficultyImg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:src="@drawable/schedule_bg"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="@+id/chooseWorkoutImg"
-                app:layout_constraintTop_toBottomOf="@+id/chooseWorkoutImg" />
+            android:id="@+id/difficultyImg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/schedule_bg"
+            app:layout_constraintEnd_toEndOf="@id/chooseWorkoutImg"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/chooseWorkoutImg"
+            app:layout_constraintTop_toBottomOf="@+id/chooseWorkoutImg" />
 
             <ImageView
                 android:id="@+id/iconDifficulty"
@@ -167,9 +166,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_swap"
                 app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
-                app:layout_constraintStart_toStartOf="@+id/difficultyImg"
+                app:layout_constraintStart_toStartOf="@+id/iconBarbel"
                 app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
-
             <TextView
                 android:id="@+id/difficultyText"
                 android:layout_width="wrap_content"
@@ -191,29 +189,28 @@
                 android:textColor="@color/hintColor"
                 android:textSize="10sp"
                 android:fontFamily="@font/poppins_regular"
-                android:layout_marginEnd="5dp"
+                android:layout_marginEnd="7dp"
                 app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
                 app:layout_constraintEnd_toStartOf="@+id/rightIcon"
                 app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/arrow_right_icon"
-                android:layout_marginEnd="30dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
                 app:layout_constraintEnd_toEndOf="@+id/difficultyImg"
                 app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
 
+
             <ImageView
                 android:id="@+id/customRepetitionsImg"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/schedule_bg"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/difficultyImg"
                 app:layout_constraintStart_toStartOf="@+id/difficultyImg"
                 app:layout_constraintTop_toBottomOf="@+id/difficultyImg" />
 
@@ -223,9 +220,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/chart_icon"
                 app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
-                app:layout_constraintStart_toStartOf="@+id/customRepetitionsImg"
+                app:layout_constraintStart_toStartOf="@+id/iconDifficulty"
                 app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
-
             <TextView
                 android:id="@+id/customRepetiotionsText"
                 android:layout_width="wrap_content"
@@ -238,12 +234,11 @@
                 app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
                 app:layout_constraintStart_toEndOf="@+id/iconCustom"
                 app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/arrow_right_icon"
-                android:layout_marginEnd="30dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
                 app:layout_constraintEnd_toEndOf="@+id/customRepetitionsImg"
                 app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
@@ -251,13 +246,12 @@
 
             <ImageView
                 android:id="@+id/customWeightImg"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/schedule_bg"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/customRepetitionsImg"
                 app:layout_constraintStart_toStartOf="@+id/customRepetitionsImg"
                 app:layout_constraintTop_toBottomOf="@+id/customRepetitionsImg" />
 
@@ -267,9 +261,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/chart_icon"
                 app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
-                app:layout_constraintStart_toStartOf="@+id/customWeightImg"
+                app:layout_constraintStart_toStartOf="@+id/iconCustom"
                 app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
-
             <TextView
                 android:id="@+id/customWeightText"
                 android:layout_width="wrap_content"
@@ -282,15 +275,15 @@
                 app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
                 app:layout_constraintStart_toEndOf="@+id/iconWeight"
                 app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/arrow_right_icon"
-                android:layout_marginEnd="30dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
                 app:layout_constraintEnd_toEndOf="@+id/customWeightImg"
                 app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
+
 
 
             <androidx.appcompat.widget.AppCompatButton
@@ -298,7 +291,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_marginHorizontal="30dp"
-                android:text="Save"
+                android:text="@string/save"
                 android:textSize="16sp"
                 android:fontFamily="@font/poppins_bold"
                 android:textColor="@color/white"

@@ -57,5 +57,9 @@
         <item name="android:textSize">22sp</item>
     </style>
 
+    <style name="AppBottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemBackground">@null</item>
+    </style>
+
 
 </resources>
