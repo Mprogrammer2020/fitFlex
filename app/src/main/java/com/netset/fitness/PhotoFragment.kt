@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.adapters.GalleryAdapter
 import com.netset.fitness.adapters.PhotoResultAdapter
 import com.netset.fitness.databinding.FragmentPhotoBinding
+import com.netset.fitness.fragments.HomeFragment
+import com.netset.fitness.utils.CommonFunction
 import com.netset.models.GalleryDataItems
 import com.netset.models.PhotoResultDataItems
 
@@ -27,6 +29,10 @@ class PhotoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.backButton.setOnClickListener {
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,HomeFragment(),R.id.dashboardContainerView,false)
+        }
 
         photoResultDataShow()
     }

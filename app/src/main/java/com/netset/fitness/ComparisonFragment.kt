@@ -1,14 +1,18 @@
 package com.netset.fitness
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.netset.fitness.activities.DashBoardActivity
 import com.netset.fitness.databinding.FragmentComparisonBinding
 import com.netset.fitness.databinding.NestedGalleryLayoutBinding
 import com.netset.fitness.utils.CommonFunction
+import java.text.DateFormatSymbols
+import java.util.Calendar
 
 class ComparisonFragment : Fragment() {
 
@@ -34,6 +38,38 @@ class ComparisonFragment : Fragment() {
             CommonFunction.openFragment(requireActivity().supportFragmentManager,ResultFragment(),R.id.dashboardContainerView,true)
         }
 
+        binding.calendarBackgroundImg.setOnClickListener {
+            openCalendar( true)
+        }
+        binding.calendarMonthlyBackgroundImg.setOnClickListener {
+            openCalendar(false)
+        }
+
     }
 
+    private fun openCalendar(isMonthly: Boolean) {
+        val calendar = Calendar.getInstance()
+        val currentYear = calendar.get(Calendar.YEAR)
+        val currentMonth = calendar.get(Calendar.MONTH)
+
+        val datePicker = DatePickerDialog(
+            requireContext(),
+            { _, year, month, _ ->
+                val monthName = DateFormatSymbols().months[month]
+                val formattedText = "$monthName"
+
+                if (isMonthly) {
+                    binding.monthNameText.text = formattedText
+                } else {
+                    binding.selectMonthText.text = formattedText
+
+                }
+            },
+            currentYear,
+            currentMonth,
+            1
+        )
+
+        datePicker.show()
+    }
 }

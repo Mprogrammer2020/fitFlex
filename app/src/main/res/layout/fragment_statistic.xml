@@ -1,11 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StatisticFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="30dp"
+            android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/statisticGraphIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/statistic_graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/monthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/may"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/statisticGraphIcon"
+        app:layout_constraintTop_toBottomOf="@+id/statisticGraphIcon" />
+
+
+    <TextView
+        android:id="@+id/nextMonthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/june"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/statisticGraphIcon"
+        app:layout_constraintTop_toTopOf="@+id/monthText" />
+
+
+    <TextView
+        android:id="@+id/loseWeightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/lose_weight"
+        android:textSize="12sp"
+        android:textColor="@color/lightBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/monthText" />
+
+    <TextView
+        android:id="@+id/loseWeightCompletePercentageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_33"
+        android:textColor="@color/grey"
+        android:layout_marginTop="16dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/monthText"
+        app:layout_constraintTop_toBottomOf="@+id/loseWeightText" />
+
+    <ProgressBar
+        android:id="@+id/loseWeightProgressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:progress="33"
+        android:progressDrawable="@drawable/progressbar_horizontal_typescolor"
+        app:layout_constraintBottom_toBottomOf="@+id/loseWeightCompletePercentageText"
+        app:layout_constraintEnd_toStartOf="@+id/percentageProgressText"
+        app:layout_constraintStart_toEndOf="@+id/loseWeightCompletePercentageText"
+        app:layout_constraintTop_toTopOf="@+id/loseWeightCompletePercentageText" />
+
+    <TextView
+        android:id="@+id/percentageProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_67"
+        android:textColor="@color/grey"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/loseWeightCompletePercentageText"
+        app:layout_constraintEnd_toEndOf="@+id/nextMonthText"
+        app:layout_constraintTop_toTopOf="@+id/loseWeightCompletePercentageText" />
+
+
+
+    <TextView
+        android:id="@+id/heightIncreaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/height_increase"
+        android:textSize="12sp"
+        android:textColor="@color/lightBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loseWeightProgressbar" />
+
+    <TextView
+        android:id="@+id/heightCompletePercentageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_88"
+        android:textColor="@color/grey"
+        android:layout_marginTop="16dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/monthText"
+        app:layout_constraintTop_toBottomOf="@+id/heightIncreaseText" />
+
+    <ProgressBar
+        android:id="@+id/heightIncreaseProgressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:progress="88"
+        android:progressDrawable="@drawable/progressbar_horizontal_typescolor"
+        app:layout_constraintBottom_toBottomOf="@+id/heightCompletePercentageText"
+        app:layout_constraintEnd_toStartOf="@+id/heightPercentageProgressText"
+        app:layout_constraintStart_toEndOf="@+id/heightCompletePercentageText"
+        app:layout_constraintTop_toTopOf="@+id/heightCompletePercentageText" />
+
+    <TextView
+        android:id="@+id/heightPercentageProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twelve"
+        android:textColor="@color/grey"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/heightCompletePercentageText"
+        app:layout_constraintEnd_toEndOf="@+id/nextMonthText"
+        app:layout_constraintTop_toTopOf="@+id/heightCompletePercentageText" />
+
+
+
+    <TextView
+        android:id="@+id/muscleMassText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/muscle_mass_increase"
+        android:textSize="12sp"
+        android:textColor="@color/lightBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightIncreaseProgressbar" />
+
+    <TextView
+        android:id="@+id/muscleMassPercentageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_57"
+        android:textColor="@color/grey"
+        android:layout_marginTop="16dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/monthText"
+        app:layout_constraintTop_toBottomOf="@+id/muscleMassText" />
+
+    <ProgressBar
+        android:id="@+id/muscleMassProgressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:progress="57"
+        android:progressDrawable="@drawable/progressbar_horizontal_typescolor"
+        app:layout_constraintBottom_toBottomOf="@+id/muscleMassPercentageText"
+        app:layout_constraintEnd_toStartOf="@+id/musclePercentageProgressText"
+        app:layout_constraintStart_toEndOf="@+id/muscleMassPercentageText"
+        app:layout_constraintTop_toTopOf="@+id/muscleMassPercentageText" />
+
+    <TextView
+        android:id="@+id/musclePercentageProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_43"
+        android:textColor="@color/grey"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/muscleMassPercentageText"
+        app:layout_constraintEnd_toEndOf="@+id/nextMonthText"
+        app:layout_constraintTop_toTopOf="@+id/muscleMassPercentageText" />
+
+
+
+
+    <TextView
+        android:id="@+id/absText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/abs"
+        android:textSize="12sp"
+        android:textColor="@color/lightBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/muscleMassProgressbar" />
+
+    <TextView
+        android:id="@+id/absPercentageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_89"
+        android:textColor="@color/grey"
+        android:layout_marginTop="16dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/monthText"
+        app:layout_constraintTop_toBottomOf="@+id/absText" />
+
+    <ProgressBar
+        android:id="@+id/absProgressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:progress="89"
+        android:progressDrawable="@drawable/progressbar_horizontal_typescolor"
+        app:layout_constraintBottom_toBottomOf="@+id/absPercentageText"
+        app:layout_constraintEnd_toStartOf="@+id/absPercentageProgressText"
+        app:layout_constraintStart_toEndOf="@+id/absPercentageText"
+        app:layout_constraintTop_toTopOf="@+id/absPercentageText" />
+
+    <TextView
+        android:id="@+id/absPercentageProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_11"
+        android:textColor="@color/grey"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/absPercentageText"
+        app:layout_constraintEnd_toEndOf="@+id/nextMonthText"
+        app:layout_constraintTop_toTopOf="@+id/absPercentageText" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/backButton"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/register_button_background"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/back_to_home"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/absProgressbar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

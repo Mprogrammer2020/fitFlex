@@ -42,6 +42,10 @@ class MealScheduleFragment : Fragment() {
 
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
 
+        binding.mealscheduleToolbar.backIconBackground.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+
 
         binding.mealscheduleToolbar.fragmentsText.text="Meal Schedule"
         updateMonthYearText()

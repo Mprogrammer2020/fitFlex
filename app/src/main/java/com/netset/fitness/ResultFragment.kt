@@ -36,6 +36,24 @@ class ResultFragment : Fragment() {
 
         CommonFunction.openFragment(requireActivity().supportFragmentManager,PhotoFragment(),R.id.comparisonResultContainer,false)
 
+
+        binding.statisticText.setOnClickListener {
+            binding.statisticIcon.visibility=View.VISIBLE
+            binding.statisticText.visibility=View.GONE
+            binding.photoIcon.visibility=View.INVISIBLE
+            binding.photoText.visibility=View.VISIBLE
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,StatisticFragment(),R.id.comparisonResultContainer,false)
+
+        }
+
+        binding.photoText.setOnClickListener {
+            binding.statisticIcon.visibility=View.INVISIBLE
+            binding.statisticText.visibility=View.VISIBLE
+            binding.photoIcon.visibility=View.VISIBLE
+            binding.photoText.visibility=View.VISIBLE
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,PhotoFragment(),R.id.comparisonResultContainer,false)
+
+        }
     }
 
 }

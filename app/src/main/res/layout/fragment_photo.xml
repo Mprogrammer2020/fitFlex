@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".PhotoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
 
 
     <TextView
@@ -22,11 +36,11 @@
         app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/typeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
-        android:text="Good"
+        android:text="@string/good"
         android:textColor="@color/green"
         app:layout_constraintBottom_toBottomOf="@+id/averageProgressText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +54,7 @@
         android:progress="62"
         android:layout_marginTop="10dp"
         android:progressDrawable="@drawable/vertical_progressbar"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/typeText"
         app:layout_constraintStart_toStartOf="@+id/averageProgressText"
         app:layout_constraintTop_toBottomOf="@+id/averageProgressText" />
 
@@ -83,13 +97,33 @@
         app:layout_constraintTop_toTopOf="@+id/monthText" />
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/photoResultRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/nextMonthText"
-        app:layout_constraintStart_toStartOf="@+id/monthText"
-        app:layout_constraintTop_toBottomOf="@+id/monthText" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/photoResultRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/monthText"
+                app:layout_constraintTop_toBottomOf="@+id/monthText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/backButton"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/register_button_background"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/back_to_home"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/photoResultRecyclerView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

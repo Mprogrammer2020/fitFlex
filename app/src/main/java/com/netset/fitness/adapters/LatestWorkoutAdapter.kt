@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class LatestWorkoutAdapter(private val context: Context,private val workoutItems:ArrayList<LatestWorkoutItems>): RecyclerView.Adapter<LatestWorkoutAdapter.ViewHolder>(){
 
+    private var maxAlpha = 1.0f // Max alpha value
+    private var minAlpha = 0.5f // Min alpha value
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view=LatestWorkoutBinding.inflate(LayoutInflater.from(context),parent,false)
         return ViewHolder(view)
@@ -26,6 +28,23 @@ class LatestWorkoutAdapter(private val context: Context,private val workoutItems
         holder.binding.backgroundImg.setImageResource(workoutItems[position].workoutImg)
 
 
+        val calculatedAlpha = calculateAlpha(position)
+        holder.binding.root.alpha = calculatedAlpha
+
+    }
+
+    private fun calculateAlpha(position: Int): Float {
+        val centerPosition = workoutItems.size / 2 // Center position
+        val offset = kotlin.math.abs(centerPosition - position).toFloat() // Offset from center
+        val maxOffset = centerPosition.toFloat() // Maximum offset
+        val alphaRange = maxAlpha - minAlpha
+        val adjustedAlpha = maxAlpha - alphaRange * (offset / maxOffset)
+
+        return if (position == centerPosition) {
+            maxAlpha
+        } else {
+            adjustedAlpha.coerceIn(minAlpha, maxAlpha)
+        }
     }
 
     class ViewHolder(val binding:LatestWorkoutBinding):RecyclerView.ViewHolder(binding.root) {
