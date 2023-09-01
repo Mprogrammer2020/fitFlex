@@ -72,7 +72,6 @@
         android:layout_marginTop="15dp"
         android:inputType="textPassword"
         android:drawableStart="@drawable/password_icon"
-        android:drawableEnd="@drawable/hide_password"
         android:paddingEnd="16dp"
         android:textCursorDrawable="@drawable/cursor_color"
         android:hint="@string/password"
@@ -82,6 +81,16 @@
         android:textColorHint="@color/hintColor"
         app:layout_constraintTop_toBottomOf="@+id/emailEditText"
         android:layout_marginHorizontal="30dp"/>
+
+            <ImageView
+                android:id="@+id/showHideIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hide_password"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/passwordEditText"
+                app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
+                app:layout_constraintTop_toTopOf="@+id/passwordEditText" />
 
     <TextView
         android:id="@+id/forgotPasswordText"

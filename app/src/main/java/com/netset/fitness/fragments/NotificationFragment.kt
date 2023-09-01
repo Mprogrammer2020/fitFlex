@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
@@ -28,6 +29,8 @@ class NotificationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
+        requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.white)
+
 
 
         binding.notificationToolbar.backIconBackground.setOnClickListener {

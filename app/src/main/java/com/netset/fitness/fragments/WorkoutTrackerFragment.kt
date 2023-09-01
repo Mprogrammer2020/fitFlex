@@ -36,6 +36,7 @@ class WorkoutTrackerFragment : Fragment() {
 
         (activity as DashBoardActivity?)?.showHideBottomBar(true)
 
+
         upcomingWorkoutRecyclerViewDataShow()
         workoutTrainingRecyclerViewDataShow()
 

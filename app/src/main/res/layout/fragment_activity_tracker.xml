@@ -85,7 +85,7 @@
                     android:id="@+id/glassIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/glass_icon"
+                    android:src="@drawable/water_glass"
                     android:layout_marginStart="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"

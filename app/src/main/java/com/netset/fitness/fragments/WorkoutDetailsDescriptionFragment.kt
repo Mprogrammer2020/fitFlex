@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.SnapHelper
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
 import com.netset.fitness.adapters.CustomRepetitionsAdapter
@@ -23,7 +25,6 @@ import com.netset.models.TimeLineDataItems
 class WorkoutDetailsDescriptionFragment : Fragment() {
   private lateinit var binding:FragmentWorkoutDetailsDescriptionBinding
     private var list:ArrayList<TimeLineDataItems> = ArrayList()
-    var mid=1
     private var customRepetitionsAdapter : CustomRepetitionsAdapter? = null
 
     private var customRepetitionsList:ArrayList<CustomRepetitionsDataItems> = ArrayList()
@@ -33,7 +34,6 @@ class WorkoutDetailsDescriptionFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         binding = FragmentWorkoutDetailsDescriptionBinding.inflate(layoutInflater,container,false)
-        (activity as DashBoardActivity?)!!.showHideBottomBar(true)
         return binding.root
     }
 
@@ -41,6 +41,8 @@ class WorkoutDetailsDescriptionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
+        requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.white)
+
 
         binding.workDetailsDescriptionToolbar.fragmentsText.text = ""
 
@@ -57,19 +59,24 @@ class WorkoutDetailsDescriptionFragment : Fragment() {
                 R.id.dashboardContainerView, true
             )
         }
-
         timeLineDataShow()
         customRepetitionsDataShow()
     }
 
     private fun customRepetitionsDataShow() {
         customRepetitionsList.clear()
-        customRepetitionsList.add(CustomRepetitionsDataItems(R.drawable.calories_icon,"420 Calories Burn",21))
-        customRepetitionsList.add(CustomRepetitionsDataItems(R.drawable.calories_icon,"420 Calories Burn",22))
-        customRepetitionsList.add(CustomRepetitionsDataItems(R.drawable.calories_icon,"420 Calories Burn",23))
-        customRepetitionsList.add(CustomRepetitionsDataItems(R.drawable.calories_icon,"420 Calories Burn",24))
-        customRepetitionsList.add(CustomRepetitionsDataItems(R.drawable.calories_icon,"420 Calories Burn",25))
-        customRepetitionsList.add(CustomRepetitionsDataItems(R.drawable.calories_icon,"420 Calories Burn",26))
+        customRepetitionsList.add(CustomRepetitionsDataItems("",""))
+        customRepetitionsList.add(CustomRepetitionsDataItems("420 Calories Burn","21"))
+        customRepetitionsList.add(CustomRepetitionsDataItems("420 Calories Burn","22"))
+        customRepetitionsList.add(CustomRepetitionsDataItems("420 Calories Burn","23"))
+        customRepetitionsList.add(CustomRepetitionsDataItems("420 Calories Burn","24"))
+        customRepetitionsList.add(CustomRepetitionsDataItems("420 Calories Burn","25"))
+        customRepetitionsList.add(CustomRepetitionsDataItems("420 Calories Burn","26"))
+        customRepetitionsList.add(CustomRepetitionsDataItems("420 Calories Burn","27"))
+        customRepetitionsList.add(CustomRepetitionsDataItems("420 Calories Burn","28"))
+        customRepetitionsList.add(CustomRepetitionsDataItems("420 Calories Burn","29"))
+        customRepetitionsList.add(CustomRepetitionsDataItems("",""))
+
 
         val snapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(binding.customRepetitionsRecyclerView)
@@ -77,6 +84,9 @@ class WorkoutDetailsDescriptionFragment : Fragment() {
         binding.customRepetitionsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         customRepetitionsAdapter = CustomRepetitionsAdapter(requireContext(),customRepetitionsList)
         binding.customRepetitionsRecyclerView.adapter = customRepetitionsAdapter
+
+
+
 
         binding.customRepetitionsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -90,15 +100,30 @@ class WorkoutDetailsDescriptionFragment : Fragment() {
                     val view = layoutManager.findViewByPosition(i)
                     if (view != null) {
                         if (i == snapPosition) {
-                            // Set alpha of middle item to 1.0 (fully visible)
                             view.alpha = 1.0f
+                            view.findViewById<View>(R.id.typeTimeText)?.visibility = View.VISIBLE
+                            view.findViewById<View>(R.id.hideView)?.visibility = View.GONE
+
+                            val time  =view.findViewById<TextView>(R.id.timesText)
+                            time.textSize=22F
+
                         } else {
-                            // Set alpha of other items to 0.5 (semi-transparent)
                             view.alpha = 0.5f
+                            view.findViewById<View>(R.id.typeTimeText)?.visibility = View.GONE
+                            view.findViewById<View>(R.id.hideView)?.visibility = View.VISIBLE
+                            val time  =view.findViewById<TextView>(R.id.timesText)
+                            time.textSize=19F
+
+
+
+
+
                         }
                         if (i == snapPosition + 1) {
+
                             view.findViewById<View>(R.id.bottomView)?.visibility = View.GONE
-                        } else{
+                        } else {
+
                             view.findViewById<View>(R.id.bottomView)?.visibility = View.VISIBLE
 
                         }
@@ -107,8 +132,6 @@ class WorkoutDetailsDescriptionFragment : Fragment() {
             }
         })
     }
-
-
 
     private fun timeLineDataShow() {
         list.clear()

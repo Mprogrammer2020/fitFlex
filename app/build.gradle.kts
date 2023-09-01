@@ -52,6 +52,7 @@ dependencies {
     implementation("com.tbuonomo:dotsindicator:5.0")
 
     implementation ("com.github.vipulasri:timelineview:1.1.5")
+    implementation ("com.github.kshitijskumar:Ticker:1.0.0")
 
 
 

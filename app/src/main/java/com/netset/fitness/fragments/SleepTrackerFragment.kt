@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
@@ -34,6 +35,8 @@ class SleepTrackerFragment : Fragment() {
 
 
         binding.sleepTrackerToolbar.fragmentsText.text="Sleep Tracker"
+        requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.white)
+
 
         binding.sleepTrackerToolbar.backIconBackground.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()

@@ -32,19 +32,26 @@ class DashBoardActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.homeIcon -> {
                     changeFragment(HomeFragment())
+                    window.statusBarColor=ContextCompat.getColor(this,R.color.white)
 
                 }
 
                 R.id.activityIcon -> {
                     changeFragment(WorkoutTrackerFragment())
+                    window.statusBarColor=ContextCompat.getColor(this,R.color.pale_blue)
+
                 }
 
                 R.id.cameraIcon -> {
                 changeFragment(ProgressPhotoFragment())
+                    window.statusBarColor=ContextCompat.getColor(this,R.color.white)
+
 
                 }
                 R.id.profileIcon -> {
                     changeFragment(ProfileFragment())
+                    window.statusBarColor=ContextCompat.getColor(this,R.color.white)
+
                 }
             }
             true

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.activities.DashBoardActivity
 import com.netset.fitness.adapters.FoodTypeAdapter
@@ -30,6 +31,8 @@ class ProgressPhotoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as DashBoardActivity?)?.showHideBottomBar(true)
+        requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.white)
+
 
 
         binding.progressPhotoToolbar.fragmentsText.text="Progress Photo"

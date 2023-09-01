@@ -36,12 +36,12 @@
    </style>
 
     <style name="NumberPickerTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorAccent">@android:color/white</item>
 
+        <item name="colorAccent">@android:color/white</item>
         <!-- Edit this colorControlNormal value as you need -->
-        <item name="colorControlNormal">@color/viewColor</item>
-         <item name="fontFamily">@font/poppins_regular</item>
-        <item name="android:textColorPrimary">@color/hintColor</item>
+        <item name="colorControlNormal">@android:color/transparent</item>
+         <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textColorPrimary">@color/grey</item>
         <item name="android:background">@android:color/white</item>
         <item name="android:textSize">14sp</item>
     </style>
@@ -60,6 +60,13 @@
     <style name="AppBottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="itemBackground">@null</item>
     </style>
+
+    <style name="CheckboxStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/pale_blue</item>  // for checked
+        <item name="android:textColorSecondary">@color/light_blue</item>  // for unchecked
+    </style>
+
+
 
 
 </resources>

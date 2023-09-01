@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.netset.fitness.R
 import com.netset.fitness.databinding.CustomRepetitionLayoutBinding
 import com.netset.models.CustomRepetitionsDataItems
 
@@ -23,22 +22,33 @@ class CustomRepetitionsAdapter(private val context: Context, private val customI
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        if (position==customItems.size-1){
-            holder.binding.bottomView.visibility = View.GONE
+
+        when (position) {
+            0 -> {
+                holder.binding.bottomView.visibility = View.GONE
+                holder.binding.caloriesBurnIcon.visibility = View.GONE
+            }
+            customItems.size - 2 -> {
+                holder.binding.bottomView.visibility = View.GONE
+
+            }
+
+            customItems.size - 1 -> {
+                holder.binding.caloriesBurnIcon.visibility = View.GONE
+                holder.binding.bottomView.visibility = View.GONE
+            }
+            else -> {
+                holder.binding.bottomView.visibility = View.VISIBLE
+                holder.binding.caloriesBurnIcon.visibility = View.VISIBLE
+
+            }
         }
 
-        holder.binding.caloriesBurnIcon.setImageResource(customItems[position].image)
         holder.binding.caloriesText.text=customItems[position].caloriesText
-        holder.binding.timesText.text = customItems[position].times.toString()
-
-
+        holder.binding.timesText.text = customItems[position].times
 
 
     }
-
-
-
-
 
     class ViewHolder(val binding: CustomRepetitionLayoutBinding): RecyclerView.ViewHolder(binding.root) {
 

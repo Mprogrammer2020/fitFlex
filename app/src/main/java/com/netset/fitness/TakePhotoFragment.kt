@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,7 +34,10 @@ class TakePhotoFragment : Fragment(),AvatarAdapter.PassImage {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
+//        requireActivity().window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+//            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN)
 
+        requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
         avatarDataShow()
 
@@ -57,6 +61,11 @@ class TakePhotoFragment : Fragment(),AvatarAdapter.PassImage {
         val selectedAvatarImage = avatarList[position].avatarImage
         binding.avatarIcon.setImageResource(selectedAvatarImage)
 
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
     }
 
 }

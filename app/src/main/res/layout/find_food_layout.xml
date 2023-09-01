@@ -33,12 +33,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="Breakfast"
+        android:text="@string/breakfast"
         android:textColor="@color/lightBlack"
         android:textSize="12sp"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="42dp"
+        android:layout_marginStart="20dp"
         app:layout_constraintTop_toBottomOf="@+id/foodItemsImg" />
 
     <TextView

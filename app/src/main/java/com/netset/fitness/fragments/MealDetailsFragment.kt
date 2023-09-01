@@ -36,6 +36,8 @@ class MealDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
+        requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.pale_blue)
+
 
 
         binding.backIconBackground.setOnClickListener {

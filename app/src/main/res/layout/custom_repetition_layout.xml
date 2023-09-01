@@ -6,35 +6,37 @@
     android:layout_height="50dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <View
-        android:visibility="gone"
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1.2dp"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/viewColor"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="25dp" />
+
 
     <ImageView
         android:id="@+id/caloriesBurnIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="18dp"
         android:src="@drawable/calories_icon"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hideView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hideView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="18dp"
+        android:text=" "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/caloriesText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:textSize="10sp"
         android:fontFamily="@font/poppins_regular"
-        android:textColor="@color/hintColor"
         android:text="@string/_450_calories_burn"
+        android:textColor="@color/hintColor"
+        android:layout_marginStart="4dp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/caloriesBurnIcon"
         app:layout_constraintStart_toEndOf="@+id/caloriesBurnIcon"
         app:layout_constraintTop_toTopOf="@+id/caloriesBurnIcon" />
@@ -52,13 +54,28 @@
         app:layout_constraintStart_toEndOf="@+id/caloriesText"
         app:layout_constraintTop_toTopOf="@+id/caloriesText" />
 
+
+    <TextView
+        android:id="@+id/typeTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="times"
+        android:visibility="invisible"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-5dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/hintColor"
+        app:layout_constraintBottom_toBottomOf="@+id/caloriesBurnIcon"
+        app:layout_constraintStart_toEndOf="@+id/timesText"
+        app:layout_constraintTop_toTopOf="@+id/caloriesBurnIcon" />
+
     <View
         android:id="@+id/bottomView"
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
         android:background="@color/viewColor"
         android:layout_marginTop="15dp"
-        android:layout_marginHorizontal="25dp"
         app:layout_constraintTop_toBottomOf="@+id/caloriesText"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

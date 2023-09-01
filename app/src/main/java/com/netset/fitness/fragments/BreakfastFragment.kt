@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
@@ -38,6 +39,8 @@ class BreakfastFragment : Fragment() {
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
 
         binding.breakfastToolbar.fragmentsText.text="Breakfast"
+        requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.white)
+
 
         binding.breakfastToolbar.backIconBackground.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()

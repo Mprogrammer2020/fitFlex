@@ -11,7 +11,7 @@
       android:id="@+id/workDetailsDescriptionToolbar"
       layout="@layout/toolbar"/>
 
-  <ScrollView
+  <androidx.core.widget.NestedScrollView
       android:layout_width="match_parent"
       app:layout_constraintTop_toBottomOf="@+id/workDetailsDescriptionToolbar"
       app:layout_constraintStart_toStartOf="parent"
@@ -202,21 +202,13 @@
             app:layout_constraintTop_toBottomOf="@+id/customRepetitionsText"
             android:orientation="vertical">
 
-          <!--  <View
-                android:id="@+id/topView"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/grey"/>-->
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/customRepetitionsRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"/>
-         <!--   <View
-                android:id="@+id/bottomView"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/grey"/>-->
+
 
         </LinearLayout>
 
@@ -238,7 +230,7 @@
               app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-  </ScrollView>
+  </androidx.core.widget.NestedScrollView>
 
 
 

@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.netset.fitness.fragments.MealScheduleFragment
 
 class CommonFunction {
 
@@ -15,8 +16,7 @@ class CommonFunction {
         fun openFragment(fragmentManager: FragmentManager, fragment: Fragment, containerId: Int, addToBackStack: Boolean = true) {
             val transaction: FragmentTransaction = fragmentManager.beginTransaction()
             transaction.replace(containerId, fragment)
-            if (addToBackStack) {
-                transaction.addToBackStack(null) }
+            if (addToBackStack) { transaction.addToBackStack(null) }
             transaction.commit()
         }
     }
