@@ -20,6 +20,8 @@ class UpcomingWorkoutAdapter(private val context: Context, private val upcomingW
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
+        holder.binding.checkBox.isChecked = position==0
+
         holder.binding.backgroundImg.setImageResource(upcomingWorkoutItems[position].workoutImg)
         holder.binding.workoutNamesText.text=upcomingWorkoutItems[position].workoutNames
         holder.binding.timesText.text=upcomingWorkoutItems[position].times

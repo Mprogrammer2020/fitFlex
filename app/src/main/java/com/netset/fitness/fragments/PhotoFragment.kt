@@ -1,4 +1,4 @@
-package com.netset.fitness
+package com.netset.fitness.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,12 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.netset.fitness.adapters.GalleryAdapter
+import com.netset.fitness.R
 import com.netset.fitness.adapters.PhotoResultAdapter
 import com.netset.fitness.databinding.FragmentPhotoBinding
-import com.netset.fitness.fragments.HomeFragment
 import com.netset.fitness.utils.CommonFunction
-import com.netset.models.GalleryDataItems
 import com.netset.models.PhotoResultDataItems
 
 
@@ -31,11 +29,14 @@ class PhotoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.white)
+        requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),
+            R.color.white
+        )
 
 
         binding.backButton.setOnClickListener {
-            CommonFunction.openFragment(requireActivity().supportFragmentManager,HomeFragment(),R.id.dashboardContainerView,false)
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,HomeFragment(),
+                R.id.dashboardContainerView,false)
         }
 
         photoResultDataShow()

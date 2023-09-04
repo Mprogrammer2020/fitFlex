@@ -1,22 +1,17 @@
-package com.netset.fitness
+package com.netset.fitness.fragments
 
-import android.icu.util.ULocale.AvailableType
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
 import com.netset.fitness.adapters.AvatarAdapter
-import com.netset.fitness.adapters.PopularDataAdapter
 import com.netset.fitness.databinding.FragmentTakePhotoBinding
 import com.netset.models.AvatarDataItems
-import com.netset.models.CategoryDataItems
-import com.netset.models.PopularDataItems
 
 class TakePhotoFragment : Fragment(),AvatarAdapter.PassImage {
     private lateinit var binding:FragmentTakePhotoBinding

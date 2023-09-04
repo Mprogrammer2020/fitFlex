@@ -202,17 +202,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/timePickerText">
 
 
-            <TimePicker
-                android:id="@+id/hoursNumberPicker"
-                android:layout_width="220dp"
-                android:layout_height="150dp"
-                android:showDividers="none"
-                android:descendantFocusability="blocksDescendants"
-                android:timePickerMode="spinner"
-                android:theme="@style/NumberPickerTheme"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                <TimePicker
+                    android:id="@+id/hoursNumberPicker"
+                    android:layout_width="220dp"
+                    android:layout_height="150dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:showDividers="none"
+                    android:theme="@style/NumberPickerTheme"
+                    android:timePickerMode="spinner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -242,12 +242,12 @@
                 app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
 
             <TextView
-                android:id="@+id/timeText"
+                android:id="@+id/workoutNameText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:fontFamily="@font/poppins_regular"
-                android:text="@string/_09_00_pm"
+                android:text="@string/upperbody_workout"
                 android:textColor="@color/hintColor"
                 android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"

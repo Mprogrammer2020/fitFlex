@@ -3,6 +3,7 @@ package com.netset.fitness.adapters
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.netset.fitness.databinding.TodayScheduleLayoutBinding
 import com.netset.models.TodayScheduleDataItems
@@ -20,7 +21,7 @@ class TodayScheduleAdapter(private val context: Context, private val todaySchedu
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-
+        
         holder.binding.iconType.setImageResource(todayScheduleItems[position].icon)
         holder.binding.bedtimeText.text=todayScheduleItems[position].typeText
         holder.binding.timeText.text=todayScheduleItems[position].time

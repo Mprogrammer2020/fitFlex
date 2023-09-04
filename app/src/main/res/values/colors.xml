@@ -16,5 +16,7 @@
     <color name="red">#FF0000</color>
     <color name="green">#42D742</color>
     <color name="transparent">#FFFFFFFF</color>
+    <color name="progressBlueColor">#B4C0FE</color>
+    <color name="lightRed">#ffb3b3</color>
 
 </resources>

@@ -5,15 +5,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.netset.fitness.ProgressPhotoFragment
-import com.netset.fitness.fragments.MealPlannerFragment
+import com.netset.fitness.fragments.ProgressPhotoFragment
 import com.netset.fitness.R
 import com.netset.fitness.databinding.ActivityDashBoardBinding
 import com.netset.fitness.fragments.HomeFragment
 import com.netset.fitness.fragments.ProfileFragment
-import com.netset.fitness.fragments.SleepTrackerFragment
 import com.netset.fitness.fragments.WorkoutTrackerFragment
-import com.netset.fitness.utils.CommonFunction
 
 class DashBoardActivity : AppCompatActivity() {
     private lateinit var binding:ActivityDashBoardBinding

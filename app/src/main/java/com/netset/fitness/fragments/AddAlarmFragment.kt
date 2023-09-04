@@ -1,4 +1,4 @@
-package com.netset.fitness
+package com.netset.fitness.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

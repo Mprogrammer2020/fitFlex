@@ -12,8 +12,11 @@
     <item android:id="@android:id/progress">
         <scale android:scaleWidth="100%">
             <shape>
-                <corners android:radius="20dp"/>
-                <solid android:color="@color/red"/>
+                <corners
+                    android:bottomLeftRadius="20dp"
+                    android:topLeftRadius="20dp"
+                    />
+                <solid android:color="@color/lightRed"/>
                     android:angle="0"/>
                 <size android:width="200dp" android:height="20dp"/>
             </shape>

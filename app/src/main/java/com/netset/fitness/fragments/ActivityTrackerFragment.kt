@@ -1,10 +1,13 @@
 package com.netset.fitness.fragments
 
+import android.graphics.LinearGradient
+import android.graphics.Shader
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
@@ -34,6 +37,34 @@ class ActivityTrackerFragment : Fragment() {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
         LatestActivityDataShow()
+
+
+        val waterLiterShader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.waterLiterText.paint.measureText(binding.waterLiterText.text.toString()),
+            binding.waterLiterText.textSize,
+            intArrayOf(
+                ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.waterLiterText.paint.shader = waterLiterShader
+
+
+        val footShader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.footText.paint.measureText(binding.footText.text.toString()),
+            binding.footText.textSize,
+            intArrayOf(
+                ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.footText.paint.shader = footShader
 
     }
 

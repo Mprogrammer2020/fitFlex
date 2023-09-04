@@ -22,7 +22,7 @@
         android:fontFamily="@font/poppins_medium"
         android:text="@string/warm_up"
         android:textColor="@color/lightBlack"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toEndOf="@+id/foodIcon"
         app:layout_constraintTop_toTopOf="@+id/foodIcon" />
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:text="@string/_05_00am"
         android:layout_marginTop="1dp"
-        android:textSize="12sp"
+        android:textSize="11sp"
         android:fontFamily="@font/poppins_medium"
         android:textColor="@color/grey"
         app:layout_constraintStart_toStartOf="@+id/foodItemNameText"

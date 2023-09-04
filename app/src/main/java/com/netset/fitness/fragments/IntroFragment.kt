@@ -30,12 +30,12 @@ class IntroFragment : Fragment() {
         val textShader = LinearGradient(0f, 0f, 0f, binding.getStatedButton.textSize,
             ContextCompat.getColor(requireContext(), R.color.pale_blue),
             ContextCompat.getColor(requireContext(), R.color.light_blue), Shader.TileMode.CLAMP)
-        binding.getStatedButton.paint.shader = textShader
+          binding.getStatedButton.paint.shader = textShader
 
 
         binding.getStatedButton.setOnClickListener {
 
-            CommonFunction.openFragment(requireActivity().supportFragmentManager,IntroSliderFragment(),R.id.introScreenContainer,false)
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,IntroSliderFragment(),R.id.introScreenContainer,true)
         }
 
 

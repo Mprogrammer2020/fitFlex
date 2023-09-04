@@ -141,7 +141,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/see_more"
-            android:textColor="@color/grey"
+            android:textColor="@color/hintColor"
             android:nestedScrollingEnabled="false"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/upcomingWorkoutText"

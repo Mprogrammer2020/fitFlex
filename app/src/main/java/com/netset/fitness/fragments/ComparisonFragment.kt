@@ -1,4 +1,4 @@
-package com.netset.fitness
+package com.netset.fitness.fragments
 
 import android.app.DatePickerDialog
 import android.os.Bundle
@@ -6,10 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContentProviderCompat.requireContext
+import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
 import com.netset.fitness.databinding.FragmentComparisonBinding
-import com.netset.fitness.databinding.NestedGalleryLayoutBinding
 import com.netset.fitness.utils.CommonFunction
 import java.text.DateFormatSymbols
 import java.util.Calendar
@@ -35,7 +34,9 @@ class ComparisonFragment : Fragment() {
         }
 
         binding.compareButton.setOnClickListener {
-            CommonFunction.openFragment(requireActivity().supportFragmentManager,ResultFragment(),R.id.dashboardContainerView,true)
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,
+                ResultFragment(),
+                R.id.dashboardContainerView,true)
         }
 
         binding.calendarBackgroundImg.setOnClickListener {

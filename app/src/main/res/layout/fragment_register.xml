@@ -133,9 +133,9 @@
                 android:id="@+id/checkBox"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:buttonTint="@color/hintColor"
                 android:layout_marginTop="8dp"
-                android:checked="true"
+                android:checked="false"
+                android:theme="@style/CheckboxStyle"
                 app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="30dp"/>
@@ -204,11 +204,12 @@
 
             <LinearLayout
                 android:id="@+id/googleAndFacebookLayout"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingVertical="5dp"
-                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="12dp"
                 android:layout_marginHorizontal="128dp"
                 android:weightSum="2"
@@ -217,14 +218,14 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginEnd="6dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_weight="1"
                     android:src="@drawable/google_icon"/>
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginStart="6dp"
+                    android:layout_marginStart="15dp"
                     android:layout_weight="1"
                     android:src="@drawable/facebook_icon"/>
             </LinearLayout>

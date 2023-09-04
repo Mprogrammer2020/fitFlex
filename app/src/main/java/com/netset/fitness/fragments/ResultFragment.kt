@@ -1,12 +1,12 @@
-package com.netset.fitness
+package com.netset.fitness.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
-import com.netset.fitness.databinding.FragmentComparisonBinding
 import com.netset.fitness.databinding.FragmentResultBinding
 import com.netset.fitness.utils.CommonFunction
 
@@ -34,7 +34,8 @@ class ResultFragment : Fragment() {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
-        CommonFunction.openFragment(requireActivity().supportFragmentManager,PhotoFragment(),R.id.comparisonResultContainer,false)
+        CommonFunction.openFragment(requireActivity().supportFragmentManager,
+            PhotoFragment(), R.id.comparisonResultContainer,false)
 
 
         binding.statisticText.setOnClickListener {
@@ -42,7 +43,9 @@ class ResultFragment : Fragment() {
             binding.statisticText.visibility=View.GONE
             binding.photoIcon.visibility=View.INVISIBLE
             binding.photoText.visibility=View.VISIBLE
-            CommonFunction.openFragment(requireActivity().supportFragmentManager,StatisticFragment(),R.id.comparisonResultContainer,false)
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,
+                StatisticFragment(),
+                R.id.comparisonResultContainer,false)
 
         }
 
@@ -51,7 +54,8 @@ class ResultFragment : Fragment() {
             binding.statisticText.visibility=View.VISIBLE
             binding.photoIcon.visibility=View.VISIBLE
             binding.photoText.visibility=View.VISIBLE
-            CommonFunction.openFragment(requireActivity().supportFragmentManager,PhotoFragment(),R.id.comparisonResultContainer,false)
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,
+                PhotoFragment(), R.id.comparisonResultContainer,false)
 
         }
     }

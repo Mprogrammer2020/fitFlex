@@ -83,7 +83,9 @@ class IntroSliderFragment : Fragment() {
 
     }
 
+
     private fun getItem(i: Int): Int {
         return binding.viewPager.currentItem + i
+
     }
 }

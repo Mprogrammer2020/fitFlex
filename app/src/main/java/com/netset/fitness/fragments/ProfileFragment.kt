@@ -1,5 +1,7 @@
 package com.netset.fitness.fragments
 
+import android.graphics.LinearGradient
+import android.graphics.Shader
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -29,6 +31,44 @@ class ProfileFragment : Fragment() {
 
 
         binding.profileToolbar.fragmentsText.text="Profile"
+
+        val cmShader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.cmText.paint.measureText(binding.cmText.text.toString()),
+            binding.cmText.textSize,
+            intArrayOf(ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.cmText.paint.shader = cmShader
+
+
+        val kgShader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.kgText.paint.measureText(binding.kgText.text.toString()),
+            binding.kgText.textSize,
+            intArrayOf(ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.kgText.paint.shader = kgShader
+
+
+        val yearShader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.yearText.paint.measureText(binding.yearText.text.toString()),
+            binding.yearText.textSize,
+            intArrayOf(ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.yearText.paint.shader = yearShader
 
     }
 }

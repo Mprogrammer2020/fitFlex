@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ProgressPhotoFragment">
+    tools:context=".fragments.ProgressPhotoFragment">
 
    <include
        android:id="@+id/progressPhotoToolbar"
@@ -76,8 +76,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:src="@drawable/learn_more_icon"
-                app:layout_constraintStart_toStartOf="@+id/ProgressMonthPhotoText"
-                app:layout_constraintTop_toBottomOf="@+id/ProgressMonthPhotoText" />
+                app:layout_constraintStart_toStartOf="@+id/progressMonthPhotoText"
+                app:layout_constraintTop_toBottomOf="@+id/progressMonthPhotoText" />
 
             <ImageView
                 android:id="@+id/calendarBoyImg"
@@ -105,11 +105,11 @@
 
 
             <ImageView
-                android:id="@+id/checkIcon"
+                android:id="@+id/compareIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/check_icon"
+                android:src="@drawable/compare_icon"
                 app:layout_constraintBottom_toBottomOf="@+id/comparePhotoText"
                 app:layout_constraintEnd_toEndOf="@+id/comparePhotoBackground"
                 app:layout_constraintTop_toTopOf="@+id/comparePhotoText" />
@@ -141,7 +141,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/reminderText" />
 
             <TextView
-                android:id="@+id/ProgressMonthPhotoText"
+                android:id="@+id/progressMonthPhotoText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"

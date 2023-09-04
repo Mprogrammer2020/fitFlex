@@ -97,7 +97,7 @@
     <string name="_5_items">5 Items</string>
     <string name="jumping_jack">Jumping Jack</string>
     <string name="easy">Easy</string>
-    <string name="description_data">A jumping jack, also known as a star jump and called a side-straddle hop in the US military, is a physical jumping exercise performed by jumping to a position with the legs spread wide</string>
+    <string name="description_data">A jumping jack, also known as a star jump and called a side-straddle hop in the US military, is a physical jumping exercise performed by jumping to a position with the legs spread wide also known as a star jump and called a side-straddle hop in the US military</string>
     <string name="read_more">Read More</string>
     <string name="show_less">Show Less</string>
     <string name="how_to_do_it">How To Do It</string>
@@ -111,7 +111,7 @@
     <string name="time">Time</string>
     <string name="thu_27_may_2023">Thu,27 May 2023</string>
     <string name="upperbody_workout">Upperbody Workout</string>
-    <string name="descriptions">Description</string>
+    <string name="descriptions">Descriptions</string>
     <string name="step_by_step">Step by Step</string>
     <string name="_8_items">8 items</string>
     <string name="add_to_breakfast_meal">Add to Breakfast Meal</string>
@@ -178,5 +178,14 @@
     <string name="choose_month_2">Choose Month 2</string>
     <string name="_450_calories_burn">450 Calories Burn</string>
     <string name="_20_times">20</string>
+    <string name="_4_steps">4 Steps</string>
+    <string name="wheat_flour">Wheat Flour</string>
+    <string name="_12g">12g</string>
+    <string name="_8_steps">8 Steps</string>
+    <string name="bluebarry_pancake">BlueBarry Pancake</string>
+    <string name="last_night_sleep">Last Night Sleep</string>
+    <string name="_8h_20m">8h 20m</string>
+    <string name="check">Check</string>
+    <string name="weekly">Weekly</string>
 
 </resources>

@@ -73,7 +73,7 @@ class RegisterFragment : Fragment() {
         val clickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
 
-                Toast.makeText(requireContext(), "clicked", Toast.LENGTH_SHORT).show()
+
 
             }
             override fun updateDrawState(ds: TextPaint) {
@@ -85,7 +85,6 @@ class RegisterFragment : Fragment() {
 
         val clickableSpan2 = object : ClickableSpan() {
             override fun onClick(widget: View) {
-                Toast.makeText(requireContext(), "clicked", Toast.LENGTH_SHORT).show()
             }
 
             override fun updateDrawState(ds: TextPaint) {

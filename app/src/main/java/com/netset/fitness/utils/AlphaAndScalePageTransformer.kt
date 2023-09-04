@@ -2,6 +2,7 @@ package com.netset.fitness.utils
 
 import android.view.View
 import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import java.lang.Math.abs
 
 

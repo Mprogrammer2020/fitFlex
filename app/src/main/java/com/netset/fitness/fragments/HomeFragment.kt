@@ -1,9 +1,12 @@
 package com.netset.fitness.fragments
 
+import android.graphics.LinearGradient
+import android.graphics.Shader
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.R
@@ -30,6 +33,16 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as DashBoardActivity?)?.showHideBottomBar(true)
+
+
+        bpmTextGradient()
+        literTextGradient()
+        hoursMinutesFradient()
+        caloriesTextGradient()
+
+
+
+
 
         binding.notificationBackground.setOnClickListener {
 
@@ -60,5 +73,66 @@ class HomeFragment : Fragment() {
         binding.latestWorkoutRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         val adapter = LatestWorkoutAdapter(requireContext(), list)
         binding.latestWorkoutRecyclerView.adapter = adapter
+    }
+
+    private fun caloriesTextGradient() {
+        val shader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.caloreisBurnText.paint.measureText(binding.caloreisBurnText.text.toString()),
+            binding.caloreisBurnText.textSize,
+            intArrayOf(
+                ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.caloreisBurnText.paint.shader = shader    }
+
+    private fun hoursMinutesFradient() {
+        val shader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.hoursMinutesText.paint.measureText(binding.hoursMinutesText.text.toString()),
+            binding.hoursMinutesText.textSize,
+            intArrayOf(
+                ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.hoursMinutesText.paint.shader = shader
+    }
+
+    private fun literTextGradient() {
+        val shader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.waterInLiterText.paint.measureText(binding.waterInLiterText.text.toString()),
+            binding.waterInLiterText.textSize,
+            intArrayOf(
+                ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.waterInLiterText.paint.shader = shader
+
+    }
+
+    private fun bpmTextGradient() {
+        val bpmShader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.bpmText.paint.measureText(binding.bpmText.text.toString()),
+            binding.bpmText.textSize,
+            intArrayOf(
+                ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.bpmText.paint.shader = bpmShader
+
     }
 }

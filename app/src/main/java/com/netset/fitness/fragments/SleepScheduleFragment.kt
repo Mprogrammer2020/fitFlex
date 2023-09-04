@@ -1,5 +1,7 @@
 package com.netset.fitness.fragments
 
+import android.graphics.LinearGradient
+import android.graphics.Shader
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,18 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.netset.fitness.AddAlarmFragment
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
-import com.netset.fitness.adapters.CalendarWorkoutScheduleAdapter
 import com.netset.fitness.adapters.SleepScheduleAdapter
 import com.netset.fitness.adapters.YourScheduleAdapter
 import com.netset.fitness.databinding.FragmentSleepScheduleBinding
 import com.netset.fitness.utils.CommonFunction
-import com.netset.models.CalendarWorkoutScheduleDataItems
 import com.netset.models.SleepScheduleDataItems
-import com.netset.models.TodayScheduleDataItems
-import com.netset.models.WorkoutTimeScheduleDataItems
 import com.netset.models.YourScheduleDataItems
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -52,12 +49,26 @@ class SleepScheduleFragment : Fragment() {
         binding.sleepScheduleToolbar.fragmentsText.text="Sleep Schedule"
 
 
+        val shader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.hoursMinutesText.paint.measureText(binding.hoursMinutesText.text.toString()),
+            binding.hoursMinutesText.textSize,
+            intArrayOf(ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.hoursMinutesText.paint.shader = shader
+
+
         binding.sleepScheduleToolbar.backIconBackground.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
         binding.addIcon.setOnClickListener {
-            CommonFunction.openFragment(requireActivity().supportFragmentManager,AddAlarmFragment(),R.id.dashboardContainerView,true)
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,
+                AddAlarmFragment(),R.id.dashboardContainerView,true)
         }
         updateCalendarData()
         todayScheduleDataShow()

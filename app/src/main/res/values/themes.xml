@@ -61,12 +61,15 @@
         <item name="itemBackground">@null</item>
     </style>
 
-    <style name="CheckboxStyle" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorAccent">@color/pale_blue</item>  // for checked
-        <item name="android:textColorSecondary">@color/light_blue</item>  // for unchecked
+
+
+    <style name="CheckboxStyle" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:colorControlNormal">#7a7a7a</item>
+        <item name="android:colorControlActivated">@color/pale_blue</item>
+        <item name="android:colorControlHighlight">@android:color/transparent</item>
     </style>
 
-
-
-
+    <style name="Widget.App.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/hintColor</item>
+    </style>
 </resources>

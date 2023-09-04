@@ -96,7 +96,7 @@
                     android:id="@+id/foodItemsNamesText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BlueBarry Pancake"
+                    android:text="@string/bluebarry_pancake"
                     android:fontFamily="@font/poppins_bold"
                     android:textColor="@color/lightBlack"
                     android:layout_marginStart="25dp"
@@ -251,12 +251,12 @@
 
 
                 <TextView
-                    android:id="@+id/itemCountsText"
+                    android:id="@+id/stepsCountsText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="25dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="@string/_8_items"
+                    android:text="@string/_8_steps"
                     android:textColor="@color/grey"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="@+id/stepText"

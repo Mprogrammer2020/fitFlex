@@ -10,7 +10,11 @@
     <item android:id="@android:id/progress">
         <scale android:scaleWidth="100%">
             <shape>
-                <corners android:radius="20dp"/>
+                <corners
+                    android:topLeftRadius="20dp"
+                    android:bottomLeftRadius="20dp"
+
+                    />
                 <gradient android:startColor="@color/purpleStart"
                     android:endColor="@color/purpleEnd"
                     android:angle="0"/>

@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
@@ -40,6 +42,8 @@ class SleepTrackerFragment : Fragment() {
 
         binding.sleepTrackerToolbar.backIconBackground.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
+            
+
         }
 
         binding.checkIcon.setOnClickListener {
