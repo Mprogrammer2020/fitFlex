@@ -93,20 +93,20 @@ class MealScheduleFragment : Fragment() {
     private fun foodTypeDataShow() {
         foodTypeList.clear()
         foodTypeList.add(FoodTypeDataItems("Breakfast","2 meals","230 calories", arrayListOf(
-            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.homey_pan_icons,"Honey pancake","07:00am"),
-            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.coffee_icons,"Coffee","07:30am"), )))
+            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.food_type_blue_bg,R.drawable.honey_pancake_icon,"Honey pancake","07:00am"),
+            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.food_type_pink_bg,R.drawable.cofffe_icon,"Coffee","07:30am"), )))
 
-        foodTypeList.add(FoodTypeDataItems("Launch","2 meals","500 calories", arrayListOf(
-            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.chicken_steak,"Chicken Steak","01:00pm"),
-            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.milk_background_icon,"Milk","02:00pm"), )))
+        foodTypeList.add(FoodTypeDataItems("Lunch","2 meals","500 calories", arrayListOf(
+            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.food_type_blue_bg,R.drawable.chicken_stealk_icons,"Chicken Steak","01:00pm"),
+            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.food_type_pink_bg,R.drawable.glass_milk_icons,"Milk","02:00pm"), )))
 
         foodTypeList.add(FoodTypeDataItems("Snacks","2 meals","140 calories", arrayListOf(
-            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.orange_icon_bg,"Orange","04:30pm"),
-            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.apple_pie_bg,"Apple Pie","04:40pm"), )))
+            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.food_type_blue_bg,R.drawable.orange_snack_icons,"Orange","04:30pm"),
+            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.food_type_pink_bg,R.drawable.apple_pie_iconsss,"Apple Pie","04:40pm"), )))
 
         foodTypeList.add(FoodTypeDataItems("Dinner","2 meals","120 calories", arrayListOf(
-            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.salad_icon_bg,"Salad","07:00pm"),
-            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.oatmeal_icon_bg,"Oatmeal","08:00pm"), )))
+            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.food_type_blue_bg,R.drawable.salad_iconss,"Salad","07:00pm"),
+            FoodTypeDataItems.NestedFoodTypeDataItems(R.drawable.food_type_pink_bg,R.drawable.ocatemeal_icon,"Oatmeal","08:00pm"), )))
 
         binding.foodTypeRecyclerView.setHasFixedSize(true)
         binding.foodTypeRecyclerView.layoutManager = LinearLayoutManager(requireContext())

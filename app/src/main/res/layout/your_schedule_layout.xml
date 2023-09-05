@@ -4,42 +4,43 @@
     android:layout_width="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:paddingEnd="15dp"
+    android:paddingEnd="12dp"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/calendarBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/calendar_white_background"
+        android:layout_width="60dp"
+        android:layout_height="75dp"
+        android:background="@drawable/calendar_bg"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/weeklyText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mon"
-        android:textSize="10sp"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/grey"
-        android:fontFamily="@font/inter_regular"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/calendarBackground"
-        app:layout_constraintStart_toStartOf="@+id/calendarBackground" />
+        <TextView
+            android:id="@+id/weeklyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mon"
+            android:textSize="10sp"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/inter_regular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/calendarBackground"
+            app:layout_constraintStart_toStartOf="@+id/calendarBackground" />
 
-    <TextView
-        android:id="@+id/dateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_medium"
-        android:text="@string/_12"
-        android:textSize="10sp"
-        android:textColor="@color/grey"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/weeklyText"
-        app:layout_constraintStart_toStartOf="@+id/weeklyText"
-        app:layout_constraintTop_toBottomOf="@+id/weeklyText" />
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="12"
+            android:textSize="10sp"
+            android:textColor="@color/grey"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/weeklyText"
+            app:layout_constraintStart_toStartOf="@+id/weeklyText"
+            app:layout_constraintTop_toBottomOf="@+id/weeklyText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

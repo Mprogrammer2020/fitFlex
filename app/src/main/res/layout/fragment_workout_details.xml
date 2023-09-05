@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/boy_jumping_icon"
         android:scaleType="center"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="-10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backIconBackground"/>
@@ -69,7 +69,7 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:background="@drawable/corner_layout"
-      android:layout_marginTop="290dp">
+      android:layout_marginTop="330dp">
 
       <ImageView
           android:id="@+id/swapIcon"
@@ -169,28 +169,39 @@
           app:layout_constraintTop_toTopOf="@+id/exerciseText" />
 
 
-      <ImageView
-          android:id="@+id/heartIcon"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:src="@drawable/heart_icon"
-          android:layout_marginEnd="25dp"
-          app:layout_constraintBottom_toBottomOf="@+id/caloriesBurnText"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintTop_toTopOf="@+id/workoutNamesText" />
+          <androidx.cardview.widget.CardView
+              android:id="@+id/heartCardView"
+              android:layout_width="32dp"
+              android:layout_height="32dp"
+              android:layout_marginEnd="30dp"
+              app:cardCornerRadius="5dp"
+              app:layout_constraintBottom_toBottomOf="@+id/exerciseText"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="@+id/workoutNamesText" />
 
 
-      <ImageView
+          <ImageView
+              android:id="@+id/heartIcon"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:elevation="10dp"
+              android:src="@drawable/heart_icon"
+              app:layout_constraintBottom_toBottomOf="@+id/heartCardView"
+              app:layout_constraintEnd_toEndOf="@+id/heartCardView"
+              app:layout_constraintStart_toStartOf="@+id/heartCardView"
+              app:layout_constraintTop_toTopOf="@+id/heartCardView" />
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
           android:id="@+id/scheduleWorkoutBackground"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:scaleType="fitXY"
-          android:src="@drawable/blue_bg_icon"
+          android:layout_height="50dp"
+          android:background="@drawable/target_blue_background"
           android:layout_marginTop="25dp"
           android:layout_marginHorizontal="25dp"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/exerciseText" />
+          app:layout_constraintTop_toBottomOf="@+id/exerciseText" >
 
       <ImageView
           android:id="@+id/calendarIcon"
@@ -238,18 +249,19 @@
           app:layout_constraintEnd_toEndOf="@+id/scheduleWorkoutBackground"
           app:layout_constraintTop_toTopOf="@+id/scheduleWorkoutBackground" />
 
+      </androidx.constraintlayout.widget.ConstraintLayout>
 
-      <ImageView
+
+      <androidx.constraintlayout.widget.ConstraintLayout
           android:id="@+id/DifficultyBackground"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:scaleType="fitXY"
-          android:src="@drawable/pink_bg"
+          android:layout_height="50dp"
+          android:background="@drawable/light_pink_bg"
           android:layout_marginTop="18dp"
           android:layout_marginHorizontal="25dp"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/scheduleWorkoutBackground" />
+          app:layout_constraintTop_toBottomOf="@+id/scheduleWorkoutBackground" >
 
       <ImageView
           android:id="@+id/difficultyIcon"
@@ -297,6 +309,8 @@
           app:layout_constraintBottom_toBottomOf="@+id/DifficultyBackground"
           app:layout_constraintEnd_toEndOf="@+id/DifficultyBackground"
           app:layout_constraintTop_toTopOf="@+id/DifficultyBackground" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
 
 
       <TextView

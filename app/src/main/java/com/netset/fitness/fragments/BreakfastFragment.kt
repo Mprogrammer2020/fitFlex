@@ -66,11 +66,11 @@ class BreakfastFragment : Fragment() {
     private fun recommendationDataShow() {
         recommendationList.clear()
         recommendationList.add(RecommendationDataItems(
-            R.drawable.recommendation_background,
-            R.drawable.pancake_icon,"Honey Pancake","Easy","32mins","120kCal"))
+            R.drawable.category_bg,
+            R.drawable.pancake_icon,"Honey Pancake","Easy","32mins","120kCal",R.drawable.common_button_bg))
         recommendationList.add(RecommendationDataItems(
-            R.drawable.recommendation_background,
-            R.drawable.pancake_icon,"Canai Breakfast","Easy","32mins","120kCal"))
+            R.drawable.category_pink_bg,
+            R.drawable.pancake_icon,"Canai Breakfast","Easy","32mins","120kCal",R.drawable.common_pink_bg))
 
 
         binding.recommendationDietRecyclerView.setHasFixedSize(true)
@@ -82,12 +82,12 @@ class BreakfastFragment : Fragment() {
 
     private fun categoryDataShow() {
         categoryList.clear()
-        categoryList.add(CategoryDataItems(R.drawable.category_blue, R.drawable.salad_icon,"Salad"))
-        categoryList.add(CategoryDataItems(R.drawable.category_pink, R.drawable.cake_icon,"Cake"))
-        categoryList.add(CategoryDataItems(R.drawable.category_blue, R.drawable.pie_icon,"Pie"))
-        categoryList.add(CategoryDataItems(R.drawable.category_pink, R.drawable.orange_icon,"Orange"))
-        categoryList.add(CategoryDataItems(R.drawable.category_blue, R.drawable.pie_icon,"Pie"))
-        categoryList.add(CategoryDataItems(R.drawable.category_pink, R.drawable.cake_icon,"Cake"))
+        categoryList.add(CategoryDataItems(R.drawable.category_bg, R.drawable.salad_icon,"Salad"))
+        categoryList.add(CategoryDataItems(R.drawable.category_pink_bg, R.drawable.cake_icon,"Cake"))
+        categoryList.add(CategoryDataItems(R.drawable.category_bg, R.drawable.pie_icon,"Pie"))
+        categoryList.add(CategoryDataItems(R.drawable.category_pink_bg, R.drawable.orange_icon,"Orange"))
+        categoryList.add(CategoryDataItems(R.drawable.category_bg, R.drawable.pie_icon,"Pie"))
+        categoryList.add(CategoryDataItems(R.drawable.category_pink_bg, R.drawable.cake_icon,"Cake"))
 
 
         binding.categoryRecyclerView.setHasFixedSize(true)

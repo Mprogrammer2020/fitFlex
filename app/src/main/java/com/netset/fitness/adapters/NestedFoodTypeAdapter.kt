@@ -21,7 +21,7 @@ class NestedFoodTypeAdapter(private val context: Context, private val nestedFood
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        holder.binding.colorBackground.setBackgroundResource(nestedFoodTypeItems[position].background)
         holder.binding.foodIcon.setImageResource(nestedFoodTypeItems[position].foodIcon)
         holder.binding.foodItemNameText.text=nestedFoodTypeItems[position].foodNames
         holder.binding.timesText.text=nestedFoodTypeItems[position].times

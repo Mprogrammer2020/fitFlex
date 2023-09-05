@@ -60,8 +60,8 @@ class MealPlannerFragment : Fragment() {
 
     private fun foodListDataShow() {
         foodList.clear()
-        foodList.add(FindFoodDataItems(R.drawable.burger_icon,"Breakfast","120+ foods",R.drawable.blue_select_icon))
-        foodList.add(FindFoodDataItems(R.drawable.burger_icon,"Launch","320+ foods",R.drawable.pink_select_icon))
+        foodList.add(FindFoodDataItems(R.drawable.right_corner_bg,R.drawable.burger_icon,"Breakfast","120+ foods",R.drawable.common_button_bg))
+        foodList.add(FindFoodDataItems(R.drawable.right_corner_pink_bg,R.drawable.burger_icon,"Lunch","320+ foods",R.drawable.common_pink_bg))
 
         binding.findSomethingFoodRecyclerView.setHasFixedSize(true)
         binding.findSomethingFoodRecyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)

@@ -1,5 +1,7 @@
 package com.netset.fitness.fragments
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -10,30 +12,56 @@ import android.view.WindowManager
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import com.netset.fitness.R
+import com.netset.fitness.activities.IntroActivity
 import com.netset.fitness.databinding.FragmentSplashBinding
 import com.netset.fitness.utils.CommonFunction
 
 
 class SplashFragment : Fragment() {
 
-   private lateinit var binding: FragmentSplashBinding
+    private lateinit var binding: FragmentSplashBinding
 
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        binding = FragmentSplashBinding.inflate(layoutInflater,container,false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View {
+        binding = FragmentSplashBinding.inflate(layoutInflater, container, false)
 
 
         return binding.root
 
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Handler(Looper.getMainLooper()).postDelayed({
 
-            CommonFunction.openFragment(requireActivity().supportFragmentManager,IntroFragment(),R.id.introScreenContainer,false)
 
-        }, 3000)
+            Handler(Looper.getMainLooper()).postDelayed({
+
+                if(isAdded)
+                {
+
+                    CommonFunction.openFragment(
+                        requireActivity().supportFragmentManager,
+                        IntroFragment(),
+                        R.id.introScreenContainer,
+                        false
+                    )
+                }
+
+
+
+            }, 3000)
+
+
+
+
+
     }
 }
+
+
+

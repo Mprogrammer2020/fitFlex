@@ -23,7 +23,7 @@ class NutritionAdapter(private val context: Context, private val nutritionsDataI
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.binding.nutritionImg.setImageResource(nutritionsDataItems[position].background)
+        holder.binding.nutritionImg.setBackgroundResource(nutritionsDataItems[position].background)
 
         holder.binding.nutritionIcon.setImageResource(nutritionsDataItems[position].nutritionIcon)
         holder.binding.caloriesGramText.text=nutritionsDataItems[position].caloriesGram

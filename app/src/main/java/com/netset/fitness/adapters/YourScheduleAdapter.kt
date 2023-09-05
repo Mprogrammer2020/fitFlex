@@ -29,12 +29,12 @@ class YourScheduleAdapter(private val context: Context, private val yourSchedule
 
 
         if (selectedItemPosition == position) {
-            holder.binding.calendarBackground.setImageResource(R.drawable.calendar_blu_background)
+            holder.binding.calendarBackground.setBackgroundResource(R.drawable.calendar_gradient_bg)
             holder.binding.weeklyText.setTextColor(ContextCompat.getColor(context, R.color.white))
             holder.binding.dateText.setTextColor(ContextCompat.getColor(context, R.color.white))
 
         } else {
-            holder.binding.calendarBackground.setImageResource(R.drawable.calendar_white_background)
+            holder.binding.calendarBackground.setBackgroundResource(R.drawable.calendar_bg)
             holder.binding.weeklyText.setTextColor(ContextCompat.getColor(context, R.color.grey))
             holder.binding.dateText.setTextColor(ContextCompat.getColor(context, R.color.grey))
 

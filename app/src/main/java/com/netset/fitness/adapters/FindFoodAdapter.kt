@@ -20,11 +20,11 @@ class FindFoodAdapter(private val context: Context, private val findFoodItems:Ar
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        holder.binding.blueRoundBackground.setBackgroundResource(findFoodItems[position].background)
         holder.binding.foodItemsImg.setImageResource(findFoodItems[position].foodItemImg)
         holder.binding.breakfastText.text=findFoodItems[position].foodNameText
         holder.binding.allFoodTypesText.text = findFoodItems[position].foodTypeText
-        holder.binding.selectImg.setImageResource(findFoodItems[position].selectImage)
+        holder.binding.selectImg.setBackgroundResource(findFoodItems[position].selectImage)
 
 
 

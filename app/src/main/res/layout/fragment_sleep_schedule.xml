@@ -25,11 +25,11 @@
             android:layout_height="wrap_content">
 
 
-            <ImageView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/hourSleepBackground"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
+                android:layout_height="150dp"
+                android:background="@drawable/target_blue_background"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="28dp"
@@ -60,11 +60,16 @@
                 app:layout_constraintStart_toStartOf="@+id/hoursSleepText"
                 app:layout_constraintTop_toBottomOf="@+id/hoursSleepText" />
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/learnMoreIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/learn_more_icon"
+                android:layout_width="90dp"
+                android:layout_height="34dp"
+                android:text="@string/learn_more"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/common_button_bg"
                 android:layout_marginTop="14dp"
                 app:layout_constraintStart_toStartOf="@+id/hoursMinutesText"
                 app:layout_constraintTop_toBottomOf="@+id/hoursMinutesText" />
@@ -72,10 +77,12 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/moon_sleep_icon"
                 android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/moon_sleep_icon"
                 app:layout_constraintBottom_toBottomOf="@+id/learnMoreIcon"
-                app:layout_constraintEnd_toEndOf="@+id/hourSleepBackground" />
+                app:layout_constraintEnd_toEndOf="@+id/hourSleepBackground"
+                app:layout_constraintTop_toTopOf="@+id/hoursSleepText" />
 
             <TextView
                 android:id="@+id/todayScheduleText"

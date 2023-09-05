@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +9,7 @@
 
     <include
         android:id="@+id/addScheduleToolbar"
-        layout="@layout/toolbar"/>
+        layout="@layout/toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -39,132 +38,223 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/chooseWorkoutImg"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/workout_details_bg"
                 android:scaleType="fitXY"
                 android:src="@drawable/schedule_bg"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/detailsWorkoutText"
-
-                />
+                app:layout_constraintTop_toBottomOf="@+id/detailsWorkoutText">
 
 
-            <ImageView
-                android:id="@+id/iconBarbel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:src="@drawable/icon_barbel"
-                app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
-                app:layout_constraintStart_toStartOf="@+id/chooseWorkoutImg"
-                app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
+                <ImageView
+                    android:id="@+id/iconBarbel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/icon_barbel"
+                    app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
+                    app:layout_constraintStart_toStartOf="@+id/chooseWorkoutImg"
+                    app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
 
 
-            <ImageView
-                android:id="@+id/rightIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/arrow_right_icon"
-                app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
-                app:layout_constraintEnd_toEndOf="@+id/chooseWorkoutImg"
-                app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
+                <TextView
+                    android:id="@+id/chooseWorkoutText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/choose_workout"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
+                    app:layout_constraintStart_toEndOf="@+id/iconBarbel"
+                    app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
 
-            <ImageView
+
+                <TextView
+                    android:id="@+id/workoutNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/upperbody_workout"
+                    android:textColor="@color/hintColor"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
+                    app:layout_constraintEnd_toStartOf="@+id/rightIcon"
+                    app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
+
+
+                <ImageView
+                    android:id="@+id/rightIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/arrow_right_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
+                    app:layout_constraintEnd_toEndOf="@+id/chooseWorkoutImg"
+                    app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/difficultyImg"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/workout_details_bg"
                 android:scaleType="fitXY"
                 android:src="@drawable/schedule_bg"
                 app:layout_constraintEnd_toEndOf="@id/chooseWorkoutImg"
                 app:layout_constraintStart_toStartOf="@+id/chooseWorkoutImg"
-                app:layout_constraintTop_toBottomOf="@+id/chooseWorkoutImg" />
+                app:layout_constraintTop_toBottomOf="@+id/chooseWorkoutImg">
 
-            <ImageView
-                android:id="@+id/iconDifficulty"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_swap"
-                app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
-                app:layout_constraintStart_toStartOf="@+id/iconBarbel"
-                app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
+                <ImageView
+                    android:id="@+id/iconDifficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_swap"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
+
+                <TextView
+                    android:id="@+id/difficultyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/difficulity"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
+                    app:layout_constraintStart_toEndOf="@+id/iconDifficulty"
+                    app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
 
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/arrow_right_icon"
-                app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
-                app:layout_constraintEnd_toEndOf="@+id/difficultyImg"
-                app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
+                <ImageView
+                    android:id="@+id/dificultyRightIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/arrow_right_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
+                    app:layout_constraintEnd_toEndOf="@+id/difficultyImg"
+                    app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
+
+                <TextView
+                    android:id="@+id/beginnerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/beginner"
+                    android:textColor="@color/hintColor"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
+                    app:layout_constraintEnd_toStartOf="@+id/dificultyRightIcon"
+                    app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            <ImageView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/customRepetitionsImg"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/schedule_bg"
+                android:background="@drawable/workout_details_bg"
                 app:layout_constraintEnd_toEndOf="@+id/difficultyImg"
                 app:layout_constraintStart_toStartOf="@+id/difficultyImg"
-                app:layout_constraintTop_toBottomOf="@+id/difficultyImg" />
+                app:layout_constraintTop_toBottomOf="@+id/difficultyImg">
 
-            <ImageView
-                android:id="@+id/iconCustom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/chart_icon"
-                app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
-                app:layout_constraintStart_toStartOf="@+id/iconDifficulty"
-                app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
+                <ImageView
+                    android:id="@+id/iconCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chart_icon"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/arrow_right_icon"
-                app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
-                app:layout_constraintEnd_toEndOf="@+id/customRepetitionsImg"
-                app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
+                <TextView
+                    android:id="@+id/customRepetiotionsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/custom_repetitions"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
+                    app:layout_constraintStart_toEndOf="@+id/iconCustom"
+                    app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/arrow_right_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
+                    app:layout_constraintEnd_toEndOf="@+id/customRepetitionsImg"
+                    app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            <ImageView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/customWeightImg"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/schedule_bg"
+                android:background="@drawable/workout_details_bg"
                 app:layout_constraintEnd_toEndOf="@+id/customRepetitionsImg"
                 app:layout_constraintStart_toStartOf="@+id/customRepetitionsImg"
-                app:layout_constraintTop_toBottomOf="@+id/customRepetitionsImg" />
+                app:layout_constraintTop_toBottomOf="@+id/customRepetitionsImg">
 
 
-            <ImageView
-                android:id="@+id/iconWeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/chart_icon"
-                app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
-                app:layout_constraintStart_toStartOf="@+id/iconCustom"
-                app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
+                <ImageView
+                    android:id="@+id/iconWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chart_icon"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/arrow_right_icon"
-                app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
-                app:layout_constraintEnd_toEndOf="@+id/customWeightImg"
-                app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
+                <TextView
+                    android:id="@+id/customWeightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/custom_weights"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
+                    app:layout_constraintStart_toEndOf="@+id/iconWeight"
+                    app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
 
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/arrow_right_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
+                    app:layout_constraintEnd_toEndOf="@+id/customWeightImg"
+                    app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             <TextView
@@ -216,6 +306,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
             <TextView
                 android:id="@+id/detailsWorkoutText"
                 android:layout_width="wrap_content"
@@ -227,85 +318,6 @@
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="@+id/timePickerText"
                 app:layout_constraintTop_toBottomOf="@+id/constraint_layout" />
-
-            <TextView
-                android:id="@+id/chooseWorkoutText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="@string/choose_workout"
-                android:textColor="@color/grey"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
-                app:layout_constraintStart_toEndOf="@+id/iconBarbel"
-                app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
-
-            <TextView
-                android:id="@+id/workoutNameText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="@string/upperbody_workout"
-                android:textColor="@color/hintColor"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="@+id/chooseWorkoutImg"
-                app:layout_constraintEnd_toStartOf="@+id/rightIcon"
-                app:layout_constraintTop_toTopOf="@+id/chooseWorkoutImg" />
-
-
-            <TextView
-                android:id="@+id/difficultyText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="@string/difficulity"
-                android:textColor="@color/grey"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
-                app:layout_constraintStart_toEndOf="@+id/iconDifficulty"
-                app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
-
-            <TextView
-                android:id="@+id/beginnerText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="@string/beginner"
-                android:textColor="@color/hintColor"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="@+id/difficultyImg"
-                app:layout_constraintEnd_toStartOf="@+id/rightIcon"
-                app:layout_constraintTop_toTopOf="@+id/difficultyImg" />
-
-            <TextView
-                android:id="@+id/customRepetiotionsText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="@string/custom_repetitions"
-                android:textColor="@color/grey"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/customRepetitionsImg"
-                app:layout_constraintStart_toEndOf="@+id/iconCustom"
-                app:layout_constraintTop_toTopOf="@+id/customRepetitionsImg" />
-
-            <TextView
-                android:id="@+id/customWeightText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="@string/custom_weights"
-                android:textColor="@color/grey"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/customWeightImg"
-                app:layout_constraintStart_toEndOf="@+id/iconWeight"
-                app:layout_constraintTop_toTopOf="@+id/customWeightImg" />
 
 
             <androidx.appcompat.widget.AppCompatButton

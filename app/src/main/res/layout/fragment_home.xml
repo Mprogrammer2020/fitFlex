@@ -94,21 +94,21 @@
                     android:id="@+id/todayTargetText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="18dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/today_target"
                     android:textColor="@color/lightBlack"
                     android:textSize="13sp"
                     app:layout_constraintBottom_toBottomOf="@+id/targetTextBackground"
-                    app:layout_constraintStart_toStartOf="@+id/targetTextBackground"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/checkIcon"
-                    android:layout_width="65dp"
-                    android:layout_height="28dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="18dp"
                     android:text="@string/check"
                     android:textColor="@color/white"
                     android:fontFamily="@font/poppins_regular"
@@ -116,7 +116,7 @@
                     android:textAllCaps="false"
                     android:background="@drawable/common_button_bg"
                     app:layout_constraintBottom_toBottomOf="@+id/targetTextBackground"
-                    app:layout_constraintEnd_toEndOf="@+id/targetTextBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
 

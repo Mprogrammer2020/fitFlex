@@ -23,7 +23,7 @@ class CategoryDataAdapter(private val context: Context, private val categoryItem
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.binding.blueBackgroundIcon.setImageResource(categoryItems[position].imgBackground)
+        holder.binding.blueBackgroundIcon.setBackgroundResource(categoryItems[position].imgBackground)
         holder.binding.foodIcon.setImageResource(categoryItems[position].foodIcon)
         holder.binding.foodTypeNameText.text = categoryItems[position].foodName
 

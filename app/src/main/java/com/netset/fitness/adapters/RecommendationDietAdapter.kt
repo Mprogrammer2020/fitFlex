@@ -20,7 +20,8 @@ class RecommendationDietAdapter(private val context: Context, private val recomm
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        holder.binding.recommendationBackground.setBackgroundResource(recommendationItems[position].backgroundImg)
+        holder.binding.viewButton.setBackgroundResource(recommendationItems[position].view)
         holder.binding.foodItemNameIcon.setImageResource(recommendationItems[position].foodIconImg)
         holder.binding.foodItemNameText.text=recommendationItems[position].itemNames
         holder.binding.easyText.text = recommendationItems[position].types

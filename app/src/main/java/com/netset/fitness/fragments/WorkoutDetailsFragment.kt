@@ -53,18 +53,18 @@ class WorkoutDetailsFragment : Fragment() {
     }
 
     private fun exerciseSetsItemsDataShow() {
-        exerciseSetsItems.add(ExerciseSetItems("Sets 1", arrayListOf<ExerciseSetItems.NestedExerciseSetsItems>(
+        exerciseSetsItems.add(ExerciseSetItems("Set 1", arrayListOf<ExerciseSetItems.NestedExerciseSetsItems>(
             ExerciseSetItems.NestedExerciseSetsItems(R.drawable.exercises_sets,"Warm Up","05:00"),
             ExerciseSetItems.NestedExerciseSetsItems(R.drawable.jumping_icon,"Jumping Jack","12x"),
             ExerciseSetItems.NestedExerciseSetsItems(R.drawable.skipping_icon,"Skipping","15x"),
             ExerciseSetItems.NestedExerciseSetsItems(R.drawable.exerxise_down_icon,"Squats","20x"))))
 
 
-        exerciseSetsItems.add(ExerciseSetItems("Sets 2", arrayListOf<ExerciseSetItems.NestedExerciseSetsItems>(
+        exerciseSetsItems.add(ExerciseSetItems("Set 2", arrayListOf<ExerciseSetItems.NestedExerciseSetsItems>(
             ExerciseSetItems.NestedExerciseSetsItems(R.drawable.down_icon,"Incline Push-Ups","12x"),
             ExerciseSetItems.NestedExerciseSetsItems(R.drawable.pushup_icon,"Push-Ups","12x"))))
 
-        exerciseSetsItems.add(ExerciseSetItems("Sets 3", arrayListOf<ExerciseSetItems.NestedExerciseSetsItems>(
+        exerciseSetsItems.add(ExerciseSetItems("Set 3", arrayListOf<ExerciseSetItems.NestedExerciseSetsItems>(
             ExerciseSetItems.NestedExerciseSetsItems(R.drawable.exercises_sets,"Cobra Stretch","15x"))))
 
 

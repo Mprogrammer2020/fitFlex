@@ -84,12 +84,12 @@
     <string name="workout_tracker">Workout Tracker</string>
     <string name="_320_calories_burn">320 Calories Burn</string>
     <string name="schedule_workout">Schedule Workout</string>
-    <string name="times">05/23,9:00 AM</string>
+    <string name="times">05/23, 09:00 AM</string>
     <string name="difficulity">Difficulity</string>
     <string name="beginner">Beginner</string>
     <string name="barbell">Barbell</string>
     <string name="exercises">Exercises</string>
-    <string name="_3_sets">3 sets</string>
+    <string name="_3_sets">3 Sets</string>
     <string name="set_1">Set 1</string>
     <string name="warm_up">Warm Up</string>
     <string name="start_workout">Start Workout</string>
@@ -109,7 +109,7 @@
     <string name="custom_weights">Custom Weights</string>
     <string name="choose_workout">Choose Workout</string>
     <string name="time">Time</string>
-    <string name="thu_27_may_2023">Thu,27 May 2023</string>
+    <string name="thu_27_may_2023">Thu, 27 May 2023</string>
     <string name="upperbody_workout">Upperbody Workout</string>
     <string name="descriptions">Descriptions</string>
     <string name="step_by_step">Step by Step</string>
@@ -145,7 +145,7 @@
     <string name="compare_my_photo">Compare my Photo</string>
     <string name="gallery">Gallery</string>
     <string name="_2_june">2 June</string>
-    <string name="choose_month_1">Choose Month 1</string>
+    <string name="choose_month_1">Select Month 1</string>
     <string name="may">May</string>
     <string name="select_month">Select Month</string>
     <string name="average_progress">Average Progress</string>
@@ -175,7 +175,7 @@
     <string name="abs">Abs</string>
     <string name="_89">89%</string>
     <string name="_11">11%</string>
-    <string name="choose_month_2">Choose Month 2</string>
+    <string name="choose_month_2">Select Month 2</string>
     <string name="_450_calories_burn">450 Calories Burn</string>
     <string name="_20_times">20</string>
     <string name="_4_steps">4 Steps</string>
@@ -187,5 +187,17 @@
     <string name="_8h_20m">8h 20m</string>
     <string name="check">Check</string>
     <string name="weekly">Weekly</string>
+    <string name="edit">Edit</string>
+    <string name="view_more">View more</string>
+    <string name="view">View</string>
+    <string name="_180kcal">180kCal</string>
+    <string name="learn_more">Learn More</string>
+    <string name="add">Add</string>
+    <string name="select">Select</string>
+    <string name="_120_foods">120+ foods</string>
+    <string name="_180kcals">180kCal</string>
+    <string name="_32mins">32mins</string>
+    <string name="easys">Easy</string>
+    <string name="honey_pancake">Honey Pancake</string>
 
 </resources>

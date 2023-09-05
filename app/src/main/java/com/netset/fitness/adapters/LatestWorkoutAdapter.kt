@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 class LatestWorkoutAdapter(private val context: Context,private val workoutItems:ArrayList<LatestWorkoutItems>): RecyclerView.Adapter<LatestWorkoutAdapter.ViewHolder>(){
 
     private var maxAlpha = 1.0f // Max alpha value
-    private var minAlpha = 0.5f // Min alpha value
+    private var minAlpha = 0.3f // Min alpha value
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view=LatestWorkoutBinding.inflate(LayoutInflater.from(context),parent,false)
         return ViewHolder(view)
@@ -29,7 +29,7 @@ class LatestWorkoutAdapter(private val context: Context,private val workoutItems
 
 
         val calculatedAlpha = calculateAlpha(position)
-        holder.binding.root.alpha = calculatedAlpha
+        holder.binding.workoutNameText.alpha = calculatedAlpha
 
     }
 

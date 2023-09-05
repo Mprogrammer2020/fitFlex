@@ -6,12 +6,13 @@
     android:paddingEnd="4dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recommendationBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="235dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
+        android:background="@drawable/category_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/recommendation_background"/>
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Honey Pancake"
+        android:text="@string/honey_pancake"
         android:textColor="@color/lightBlack"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/recommendationBackground"
@@ -44,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_regular"
-        android:text="Easy"
+        android:text="@string/easys"
         android:textColor="@color/grey"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@+id/foodItemNameIcon"
@@ -67,7 +68,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_regular"
         android:layout_marginStart="4dp"
-        android:text="32mins"
+        android:text="@string/_32mins"
         android:textColor="@color/grey"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/easyText"
@@ -92,20 +93,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="180kCal"
+        android:text="@string/_180kcals"
         android:textColor="@color/grey"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/easyText"
-        app:layout_constraintEnd_toEndOf="@+id/foodItemNameIcon"
         app:layout_constraintStart_toEndOf="@+id/viewBackground"
         app:layout_constraintTop_toTopOf="@+id/easyText" />
 
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/view_icon_button"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/viewButton"
+        android:layout_width="96dp"
+        android:layout_height="34dp"
         android:layout_marginTop="14dp"
+        android:background="@drawable/common_button_bg"
+        android:text="@string/view"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:fontFamily="@font/poppins_semibold"
         app:layout_constraintEnd_toEndOf="@+id/recommendationBackground"
         app:layout_constraintStart_toStartOf="@+id/recommendationBackground"
         app:layout_constraintTop_toBottomOf="@+id/easyText" />

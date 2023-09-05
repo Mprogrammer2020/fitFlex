@@ -1,5 +1,7 @@
 package com.netset.fitness.fragments
 
+import android.graphics.LinearGradient
+import android.graphics.Shader
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -44,6 +46,18 @@ class MealDetailsFragment : Fragment() {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
+        val shader: Shader = LinearGradient(
+            0f,
+            0f,
+            binding.madeByText.paint.measureText(binding.madeByText.text.toString()),
+            binding.madeByText.textSize,
+            intArrayOf(ContextCompat.getColor(requireContext(),R.color.pale_blue),
+                ContextCompat.getColor(requireContext(),R.color.light_blue)),
+            floatArrayOf(0f, 1f),
+            Shader.TileMode.CLAMP
+        )
+        binding.madeByText.paint.shader = shader
+
 
         nutritionDataShow()
         intgredientsDataShow()
@@ -65,13 +79,12 @@ class MealDetailsFragment : Fragment() {
 
         nutritionList.clear()
         nutritionList.add(NutritionDataItems(
-            R.drawable.nutrition_background,
+            R.drawable.nutrition_bg,
             R.drawable.calories_icon,"120kCal"))
-        nutritionList.add(NutritionDataItems(R.drawable.nutrition_background, R.drawable.egg_icon,"30g fats"))
-        nutritionList.add(NutritionDataItems(
-            R.drawable.protins_backgroung,
+        nutritionList.add(NutritionDataItems(R.drawable.nutrition_bg, R.drawable.egg_icon,"30g fats"))
+        nutritionList.add(NutritionDataItems(R.drawable.nutrition_bg,
             R.drawable.proteins_icon,"20g proteins"))
-        nutritionList.add(NutritionDataItems(R.drawable.nutrition_background, R.drawable.egg_icon,"30g fats"))
+        nutritionList.add(NutritionDataItems(R.drawable.nutrition_bg, R.drawable.egg_icon,"30g fats"))
 
         binding.nutritionRecyclerView.setHasFixedSize(true)
         binding.nutritionRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL,false)
@@ -82,9 +95,9 @@ class MealDetailsFragment : Fragment() {
 
     private fun intgredientsDataShow() {
         ingredientsList.clear()
-        ingredientsList.add(IngredientsDataItems(R.drawable.flour_icon,"Wheat Flour","12g"))
-        ingredientsList.add(IngredientsDataItems(R.drawable.sugar_icon,"Sugar","3 tbsp"))
-        ingredientsList.add(IngredientsDataItems(R.drawable.baking_icon,"Baking Soda","2 tsp"))
+        ingredientsList.add(IngredientsDataItems(R.drawable.wheat_flour_icon,"Wheat Flour","12g"))
+        ingredientsList.add(IngredientsDataItems(R.drawable.sugarcanw_icon,"Sugar","3 tbsp"))
+        ingredientsList.add(IngredientsDataItems(R.drawable.baking_soda_icon,"Baking Soda","2 tsp"))
         ingredientsList.add(IngredientsDataItems(R.drawable.eggs_icon,"Eggs","2 items"))
 
         binding.interdientsRecyclerView.setHasFixedSize(true)

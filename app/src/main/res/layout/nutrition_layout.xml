@@ -3,16 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingEnd="12dp"
+    android:paddingEnd="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/nutritionImg"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:paddingEnd="8dp"
+        android:background="@drawable/nutrition_bg"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/nutrition_background"/>
+        android:src="@drawable/nutrition_background">
 
     <ImageView
         android:id="@+id/nutrition_icon"
@@ -20,7 +22,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/calories_icon"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="6dp"
         app:layout_constraintBottom_toBottomOf="@+id/nutritionImg"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +30,7 @@
         android:id="@+id/caloriesGramText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="180kCal"
+        android:text="@string/_180kcal"
         android:textSize="9sp"
         android:fontFamily="@font/poppins_regular"
         android:textColor="@color/lightBlack"
@@ -37,7 +39,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/nutrition_icon"
         app:layout_constraintStart_toEndOf="@+id/nutrition_icon"
         app:layout_constraintTop_toTopOf="@+id/nutrition_icon" />
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

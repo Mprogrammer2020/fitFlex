@@ -41,8 +41,8 @@
 
   <ImageView
       android:id="@+id/forwardIcon"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="26dp"
+      android:layout_height="26dp"
       android:src="@drawable/arrow__right_circle"
       android:layout_marginEnd="5dp"
       app:layout_constraintBottom_toBottomOf="@+id/timesText"

@@ -4,15 +4,28 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/foodIcon"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorBackground"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginTop="8dp"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
-        android:src="@drawable/homey_pan_icons"
+        android:background="@drawable/food_type_blue_bg"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/foodIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/honey_pancake_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/foodItemNameText"
@@ -24,8 +37,8 @@
         android:textColor="@color/lightBlack"
         android:textSize="14sp"
         android:layout_marginTop="15dp"
-        app:layout_constraintStart_toEndOf="@+id/foodIcon"
-        app:layout_constraintTop_toTopOf="@+id/foodIcon" />
+        app:layout_constraintStart_toEndOf="@+id/colorBackground"
+        app:layout_constraintTop_toTopOf="@+id/colorBackground" />
 
     <TextView
         android:id="@+id/timesText"
@@ -41,8 +54,8 @@
 
     <ImageView
         android:id="@+id/forwardIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
         android:src="@drawable/arrow__right_circle"
         app:layout_constraintBottom_toBottomOf="@+id/timesText"
         app:layout_constraintEnd_toEndOf="parent"

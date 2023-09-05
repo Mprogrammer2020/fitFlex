@@ -13,7 +13,7 @@
        layout="@layout/toolbar"/>
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,24 +58,28 @@
                 app:layout_constraintEnd_toEndOf="@+id/reminderBackgroundImg"
                 app:layout_constraintTop_toTopOf="@+id/reminderBackgroundImg" />
 
-            <ImageView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/progressBackgroundImg"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="130dp"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="18dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/progress_background"
+                android:background="@drawable/target_blue_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/reminderBackgroundImg" />
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/learnMoreIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="96dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="15dp"
-                android:src="@drawable/learn_more_icon"
+                android:textSize="9sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_semibold"
+                android:textAllCaps="false"
+                android:text="@string/learn_more"
+                android:background="@drawable/common_button_bg"
                 app:layout_constraintStart_toStartOf="@+id/progressMonthPhotoText"
                 app:layout_constraintTop_toBottomOf="@+id/progressMonthPhotoText" />
 
@@ -91,28 +95,47 @@
                 app:layout_constraintEnd_toEndOf="@+id/progressBackgroundImg"
                 app:layout_constraintTop_toTopOf="@+id/progressBackgroundImg" />
 
-            <ImageView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/comparePhotoBackground"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="30dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/target_background"
+                android:background="@drawable/target_blue_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/progressBackgroundImg" />
+                app:layout_constraintTop_toBottomOf="@+id/progressBackgroundImg" >
 
 
-            <ImageView
-                android:id="@+id/compareIcon"
+            <TextView
+                android:id="@+id/comparePhotoText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:src="@drawable/compare_icon"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/compare_my_photo"
+                android:textColor="@color/lightBlack"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/comparePhotoBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/comparePhotoBackground" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/compareIcon"
+                android:layout_width="90dp"
+                android:layout_height="31dp"
+                android:layout_marginEnd="18dp"
+                android:text="@string/compare"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/common_button_bg"
                 app:layout_constraintBottom_toBottomOf="@+id/comparePhotoText"
                 app:layout_constraintEnd_toEndOf="@+id/comparePhotoBackground"
                 app:layout_constraintTop_toTopOf="@+id/comparePhotoText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             <TextView
@@ -144,7 +167,7 @@
                 android:id="@+id/progressMonthPhotoText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="24dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="@string/track_your_progress_each_month_with_photo"
                 android:textColor="@color/lightBlack"
@@ -153,18 +176,7 @@
                 app:layout_constraintTop_toTopOf="@+id/progressBackgroundImg" />
 
 
-            <TextView
-                android:id="@+id/comparePhotoText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/compare_my_photo"
-                android:textColor="@color/lightBlack"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@+id/comparePhotoBackground"
-                app:layout_constraintStart_toStartOf="@+id/comparePhotoBackground"
-                app:layout_constraintTop_toTopOf="@+id/comparePhotoBackground" />
+
 
             <TextView
                 android:id="@+id/galleryText"
@@ -212,7 +224,7 @@
         android:src="@drawable/camera_pink_icon"
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent" />
 
 

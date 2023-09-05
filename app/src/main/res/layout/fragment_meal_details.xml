@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/corner_layout"
-        android:layout_marginTop="300dp">
+        android:layout_marginTop="310dp">
 
         <ImageView
             android:id="@+id/swapIcon"
@@ -132,15 +132,27 @@
                     app:layout_constraintTop_toTopOf="@+id/byText" />
 
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/heartCardView"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="30dp"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/madeByText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/foodItemsNamesText"/>
+
+
                 <ImageView
                     android:id="@+id/heartIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="25dp"
+                    android:elevation="10dp"
                     android:src="@drawable/heart_icon"
-                    app:layout_constraintBottom_toBottomOf="@+id/madeByText"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/foodItemsNamesText" />
+                    app:layout_constraintBottom_toBottomOf="@+id/heartCardView"
+                    app:layout_constraintEnd_toEndOf="@+id/heartCardView"
+                    app:layout_constraintStart_toStartOf="@+id/heartCardView"
+                    app:layout_constraintTop_toTopOf="@+id/heartCardView" />
 
                 <TextView
                     android:id="@+id/nutritionsText"
