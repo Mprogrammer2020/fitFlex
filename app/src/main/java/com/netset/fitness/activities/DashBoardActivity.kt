@@ -65,13 +65,11 @@ class DashBoardActivity : AppCompatActivity() {
         if (!status){
             binding.bottomBar.visibility = View.GONE
             binding.fab.visibility=View.GONE
-            binding.searchIcon.visibility=View.GONE
 
         }
         else{
             binding.bottomBar.visibility = View.VISIBLE
             binding.fab.visibility=View.VISIBLE
-            binding.searchIcon.visibility=View.VISIBLE
 
         }
 

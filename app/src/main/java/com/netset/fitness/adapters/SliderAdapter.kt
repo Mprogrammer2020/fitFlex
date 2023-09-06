@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager.widget.PagerAdapter
+import com.bumptech.glide.Glide
 import com.netset.fitness.R
 import com.netset.models.SliderData
 
@@ -20,7 +22,7 @@ class SliderAdapter(private val context: Context, val sliderList: ArrayList<Slid
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
 
-        return view === `object` as RelativeLayout
+        return view === `object` as ConstraintLayout
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
@@ -30,25 +32,23 @@ class SliderAdapter(private val context: Context, val sliderList: ArrayList<Slid
         val view: View = layoutInflater.inflate(R.layout.slider_item, container, false)
 
         val imageView: ImageView = view.findViewById(R.id.sliderImage)
-        val sliderHeadingTV: TextView = view.findViewById(R.id.titleSliderText)
-        val sliderDescTV: TextView = view.findViewById(R.id.descriptionSliderText)
+        val sliderTitle: TextView = view.findViewById(R.id.titleSliderText)
+        val sliderDescription: TextView = view.findViewById(R.id.descriptionSliderText)
 
 
-        val sliderData: SliderData = sliderList[position]
-        sliderHeadingTV.text = sliderData.slideTitle
-        sliderDescTV.text = sliderData.slideDescription
-        imageView.setImageResource(sliderData.slideImage)
+        sliderTitle.text = sliderList[position].slideTitle
+        sliderDescription.text = sliderList[position].slideDescription
+        Glide.with(context)
+            .load(sliderList[position].slideImage)
+            .into(imageView)
 
-        // on below line we are adding our view to container.
         container.addView(view)
-
-        // on below line we are returning our view.
         return view
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
 
-        container.removeView(`object` as RelativeLayout)
+        container.removeView(`object` as ConstraintLayout)
     }
 
 }

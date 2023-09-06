@@ -30,29 +30,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_mavigation_item"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+    <ImageView
         android:id="@+id/fab"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_gravity="center"
+        android:elevation="10dp"
+        android:src="@drawable/search_floation"
         android:layout_marginBottom="40dp"
-        android:scaleType="center"
-        app:elevation="300dp"
-        android:backgroundTint="@color/light_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/bottomBar"
         app:layout_constraintTop_toTopOf="@+id/bottomBar" />
 
-
-    <ImageView
-        android:id="@+id/searchIcon"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
-        android:src="@drawable/white_search_icon"
-        android:elevation="400dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fab"
-        app:layout_constraintEnd_toEndOf="@+id/fab"
-        app:layout_constraintStart_toStartOf="@+id/fab"
-        app:layout_constraintTop_toTopOf="@+id/fab" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -24,6 +26,7 @@
         <activity
             android:name=".activities.RegisterActivity"
             android:exported="false"
+            android:windowSoftInputMode="stateHidden"
             android:theme="@style/LoginTheme" />
         <activity
             android:name=".activities.IntroActivity"

@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
 import com.netset.fitness.adapters.IngredientsAdapter
@@ -39,7 +40,6 @@ class MealDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
         requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.pale_blue)
-
 
 
         binding.backIconBackground.setOnClickListener {

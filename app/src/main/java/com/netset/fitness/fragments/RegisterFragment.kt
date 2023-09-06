@@ -1,9 +1,11 @@
 package com.netset.fitness.fragments
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -37,12 +39,9 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         binding.registerButton.setOnClickListener {
-
             CommonFunction.openFragment(requireActivity().supportFragmentManager,RegisterUserDetailsFragment(),R.id.registerContainer,true)
         }
-
 
         binding.showHideIcon.setOnClickListener {
             isPasswordVisible = !isPasswordVisible // Toggle the state
@@ -73,7 +72,8 @@ class RegisterFragment : Fragment() {
         val clickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
 
-
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
+                widget.context.startActivity(intent)
 
             }
             override fun updateDrawState(ds: TextPaint) {
@@ -85,6 +85,9 @@ class RegisterFragment : Fragment() {
 
         val clickableSpan2 = object : ClickableSpan() {
             override fun onClick(widget: View) {
+
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
+                widget.context.startActivity(intent)
             }
 
             override fun updateDrawState(ds: TextPaint) {

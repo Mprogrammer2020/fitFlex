@@ -9,6 +9,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager.widget.PagerAdapter
+import com.bumptech.glide.Glide
 import com.netset.fitness.R
 import com.netset.models.CarouselData
 import com.netset.models.SliderData
@@ -19,16 +20,19 @@ class CarouselSliderAdapter(private val context: Context, private val cardSlider
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val layoutInflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view: View = layoutInflater.inflate(R.layout.carusoel_items, container, false)
-        val card: ImageView = view.findViewById(R.id.cardUserImage)
-        val viewCard: ImageView = view.findViewById(R.id.viewImg)
+        val viewCard: ImageView = view.findViewById(R.id.cardUserImg)
 
-        val titleText: TextView = view.findViewById(R.id.cardTitleText)
-        val descriptionText: TextView = view.findViewById(R.id.cardDescriptionText)
+        val titleText: TextView = view.findViewById(R.id.titleText)
+        val descriptionText: TextView = view.findViewById(R.id.descriptionText)
 
-        card.setImageResource(cardSliderList[position].cardGoals)
         viewCard.setImageResource(cardSliderList[position].viewImg)
         titleText.text=cardSliderList[position].cardTitle
         descriptionText.text=cardSliderList[position].cardDescription
+
+        Glide.with(context)
+            .load(cardSliderList[position].viewImg)
+            .into(viewCard)
+
         container.addView(view)
         return view
     }

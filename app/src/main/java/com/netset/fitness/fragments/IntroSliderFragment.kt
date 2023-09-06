@@ -68,7 +68,6 @@ class IntroSliderFragment : Fragment() {
             override fun onPageScrollStateChanged(state: Int) {}
 
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-                // Calculate the progress based on the position
                 val totalSlides = sliderList.size
                 val progress = ((position + 1) * 100) / totalSlides
                 binding.progressBar.progress = progress

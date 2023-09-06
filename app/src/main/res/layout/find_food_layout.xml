@@ -58,6 +58,7 @@
         android:textSize="10sp"
         android:textAllCaps="false"
         android:text="@string/select"
+        android:stateListAnimator="@null"
         android:textColor="@color/white"
         android:background="@drawable/common_button_bg"
         android:layout_marginTop="12dp"

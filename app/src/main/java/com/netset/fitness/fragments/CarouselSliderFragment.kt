@@ -41,24 +41,11 @@ class CarouselSliderFragment : Fragment() {
 
 
 
-        cardSliderList.add(CarouselData(R.drawable.first_card,R.drawable.view,"Improve Shape","I have a low amount of body fat and need / want to build more muscle"))
-        cardSliderList.add(CarouselData(R.drawable.second_card,R.drawable.view,"Lean & Tone","I’m “skinny fat”. look thin but have no shape. I want to add learn muscle in the right way"))
-        cardSliderList.add(CarouselData(R.drawable.third_card_goals,R.drawable.view,"Lose a Fat", "I have over 20 lbs to lose. I want to drop all this fat and gain muscle mass"))
+        cardSliderList.add(CarouselData(R.drawable.first_card,"Improve Shape","I have a low amount of body fat \nand need / want to build more \nmuscle"))
+        cardSliderList.add(CarouselData(R.drawable.second_card,"Lean & Tone","I’m “skinny fat”. look thin but have \nno shape. I want to add learn \nmuscle in the right way"))
+        cardSliderList.add(CarouselData(R.drawable.third_card_goals,"Lose a Fat", "I have over 20 lbs to lose. I want to \ndrop all this fat and gain muscle \nmass"))
         binding.viewPager.offscreenPageLimit = 3
-        binding.viewPager.setPageTransformer(false, ViewPager.PageTransformer { page, position ->
-            val pageWidth = binding.viewPager.measuredWidth - binding.viewPager.paddingLeft - binding.viewPager.paddingRight
-            val paddingLeft = binding.viewPager.paddingLeft
-            val transformPos = (page.left - (binding.viewPager.scrollX + paddingLeft)).toFloat() / pageWidth
-
-            if (transformPos < -1) {
-                page.scaleY = 0.8f
-            } else if (transformPos <= 1) {
-                page.scaleY = 1f
-            } else {
-                page.scaleY = 0.8f
-            }
-        })
-
+        binding.viewPager.setPageTransformer(false,AlphaAndScalePageTransformer())
         binding.viewPager.adapter =  CarouselSliderAdapter(requireContext(), cardSliderList)
         binding.springDotsIndicator.attachTo(binding.viewPager)
 

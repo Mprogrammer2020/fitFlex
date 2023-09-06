@@ -109,7 +109,7 @@
                 android:layout_marginTop="15dp"
                 android:inputType="textPassword"
                 android:drawableStart="@drawable/password_icon"
-                android:paddingEnd="16dp"
+                android:paddingEnd="47dp"
                 android:textCursorDrawable="@drawable/cursor_color"
                 android:hint="@string/password"
                 android:paddingStart="16dp"
@@ -125,6 +125,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/hide_password"
                 android:layout_marginEnd="16dp"
+                android:padding="6dp"
                 app:layout_constraintBottom_toBottomOf="@+id/passwordEditText"
                 app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
                 app:layout_constraintTop_toTopOf="@+id/passwordEditText" />
@@ -135,7 +136,7 @@
                 android:layout_height="25dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
-                android:theme="@style/CheckboxStyle"
+                android:button="@drawable/custom_checkboxs"
                 app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="30dp"/>
@@ -147,7 +148,7 @@
                 android:textColor="@color/hintColor"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/poppins_regular"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="6dp"
                 android:textSize="11sp"
                 app:layout_constraintStart_toEndOf="@+id/checkBox"
                 app:layout_constraintTop_toTopOf="@+id/checkBox" />

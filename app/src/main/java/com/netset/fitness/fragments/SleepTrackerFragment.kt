@@ -1,21 +1,19 @@
 package com.netset.fitness.fragments
 
+import android.graphics.Typeface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
-import androidx.core.text.HtmlCompat
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
-import com.netset.fitness.adapters.TimelineStepsAdapter
 import com.netset.fitness.adapters.TodayScheduleAdapter
 import com.netset.fitness.databinding.FragmentSleepTrackerBinding
 import com.netset.fitness.utils.CommonFunction
-import com.netset.models.TimelineStepsDataItems
 import com.netset.models.TodayScheduleDataItems
 
 
@@ -38,6 +36,8 @@ class SleepTrackerFragment : Fragment() {
 
         binding.sleepTrackerToolbar.fragmentsText.text="Sleep Tracker"
         requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.white)
+
+        binding.timeText.text = Html.fromHtml("<b>8</b>h <b>20</b>m")
 
 
         binding.sleepTrackerToolbar.backIconBackground.setOnClickListener {

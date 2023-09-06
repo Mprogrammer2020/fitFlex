@@ -62,10 +62,13 @@
         app:layout_constraintTop_toTopOf="@+id/dotIconBackground" />
 
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomSheetContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/corner_layout"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         android:layout_marginTop="310dp">
 
         <ImageView

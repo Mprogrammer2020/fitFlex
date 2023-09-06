@@ -102,7 +102,7 @@
     <string name="show_less">Show Less</string>
     <string name="how_to_do_it">How To Do It</string>
     <string name="custom_repetitions">Custom Repetitions</string>
-    <string name="search_pancake"><font size="12">Search Pancake</font></string>
+    <string name="search_pancake"><font size="14">Search Pancake</font></string>
     <string name="recommendation_diet">Recommendation \nfor Diet</string>
     <string name="ingredients">Ingredients That You \nWill Need</string>
     <string name="details_workout">Details Workout</string>

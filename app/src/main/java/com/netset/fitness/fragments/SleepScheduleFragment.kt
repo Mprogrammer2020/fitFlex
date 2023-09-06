@@ -3,6 +3,7 @@ package com.netset.fitness.fragments
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.os.Bundle
+import android.text.Html
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -48,6 +49,7 @@ class SleepScheduleFragment : Fragment() {
 
         binding.sleepScheduleToolbar.fragmentsText.text="Sleep Schedule"
 
+        binding.hoursMinutesText.text = Html.fromHtml("<b>8</b>hours <b>30</b>minutes")
 
         val shader: Shader = LinearGradient(
             0f,
