@@ -52,6 +52,12 @@ class AddScheduleFragment : Fragment() {
             showDatePicker()
         }
 
+//        binding.hoursNumberPicker.setOnTimeChangedListener { view, hourOfDay, minute ->
+//            val amPm = if (hourOfDay >= 12) "PM" else "AM"
+//            val formattedHour = if (hourOfDay > 12) hourOfDay - 12 else hourOfDay
+//            binding.hoursNumberPicker.contentDescription = String.format("%02d:%02d $amPm", formattedHour, minute)
+//        }
+
 
     }
 

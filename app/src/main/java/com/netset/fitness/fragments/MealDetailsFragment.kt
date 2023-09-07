@@ -41,7 +41,6 @@ class MealDetailsFragment : Fragment() {
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
         requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.pale_blue)
 
-
         binding.backIconBackground.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }

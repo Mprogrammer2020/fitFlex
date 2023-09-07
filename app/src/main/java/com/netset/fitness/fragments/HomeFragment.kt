@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.netset.fitness.DemoFragment
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
 import com.netset.fitness.adapters.LatestWorkoutAdapter
@@ -33,6 +34,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as DashBoardActivity?)?.showHideBottomBar(true)
+
+        binding.caloriesLinearLayout.setOnClickListener{
+            CommonFunction.openFragment(requireActivity().supportFragmentManager,DemoFragment(),R.id.dashboardContainerView,true)
+        }
 
 
         bpmTextGradient()

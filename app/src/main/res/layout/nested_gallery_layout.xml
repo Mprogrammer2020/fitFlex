@@ -6,6 +6,8 @@
     android:paddingEnd="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/galleryImg"
         android:layout_width="100dp"

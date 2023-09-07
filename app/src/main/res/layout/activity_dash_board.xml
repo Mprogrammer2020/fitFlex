@@ -23,12 +23,15 @@
         android:background="@android:color/white"
         app:itemBackground="@null"
         android:clipChildren="false"
+        android:theme="@style/LoginTheme"
         app:itemIconTint="@color/bottom_icon"
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_mavigation_item"/>
+        app:menu="@menu/bottom_mavigation_item">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
     <ImageView
@@ -42,5 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/bottomBar"
         app:layout_constraintTop_toTopOf="@+id/bottomBar" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

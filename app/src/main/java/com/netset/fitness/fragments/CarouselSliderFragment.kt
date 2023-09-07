@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.netset.fitness.utils.AlphaAndScalePageTransformer
@@ -29,25 +30,48 @@ class CarouselSliderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        with(binding) {
 
-        binding.confirmButton.setOnClickListener {
 
-            val transaction =requireActivity().supportFragmentManager.beginTransaction().replace(
-                R.id.registerContainer,
-                SuccessRegistrationFragment()
-            )
-            transaction.commit()
+           confirmButton.setOnClickListener {
+
+                val transaction =requireActivity().supportFragmentManager.beginTransaction().replace(
+                    R.id.registerContainer,
+                    SuccessRegistrationFragment()
+                )
+                transaction.commit()
+            }
+
+
+
+
+            val onPageChangeListener = object : ViewPager.OnPageChangeListener {
+                override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+                }
+
+                override fun onPageSelected(position: Int) {
+                    customCircleIndicator.updatePosition(position)
+
+                }
+
+                override fun onPageScrollStateChanged(state: Int) {
+                }
+            }
+
+           viewPager.addOnPageChangeListener(onPageChangeListener)
+
+            cardSliderList.add(CarouselData(R.drawable.first_card,"Improve Shape","I have a low amount of body fat \nand need / want to build more \nmuscle"))
+            cardSliderList.add(CarouselData(R.drawable.second_card,"Lean & Tone","I’m “skinny fat”. look thin but have \nno shape. I want to add learn \nmuscle in the right way"))
+            cardSliderList.add(CarouselData(R.drawable.third_card_goals,"Lose a Fat", "I have over 20 lbs to lose. I want to \ndrop all this fat and gain muscle \nmass"))
+           viewPager.offscreenPageLimit = 3
+           viewPager.setPageTransformer(false,AlphaAndScalePageTransformer())
+           viewPager.adapter =  CarouselSliderAdapter(requireContext(), cardSliderList)
+            //    binding.springDotsIndicator.attachTo(binding.viewPager)
+
+
+
         }
 
-
-
-        cardSliderList.add(CarouselData(R.drawable.first_card,"Improve Shape","I have a low amount of body fat \nand need / want to build more \nmuscle"))
-        cardSliderList.add(CarouselData(R.drawable.second_card,"Lean & Tone","I’m “skinny fat”. look thin but have \nno shape. I want to add learn \nmuscle in the right way"))
-        cardSliderList.add(CarouselData(R.drawable.third_card_goals,"Lose a Fat", "I have over 20 lbs to lose. I want to \ndrop all this fat and gain muscle \nmass"))
-        binding.viewPager.offscreenPageLimit = 3
-        binding.viewPager.setPageTransformer(false,AlphaAndScalePageTransformer())
-        binding.viewPager.adapter =  CarouselSliderAdapter(requireContext(), cardSliderList)
-        binding.springDotsIndicator.attachTo(binding.viewPager)
 
 
 

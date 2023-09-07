@@ -14,27 +14,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/spring_dots_indicator"
+        app:layout_constraintBottom_toTopOf="@+id/customCircleIndicator"
          app:layout_constraintTop_toTopOf="parent" />
 
 
-    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
-        android:id="@+id/spring_dots_indicator"
+    
+    <com.netset.fitness.utils.CustomCircleIndicatorView
+        android:id="@+id/customCircleIndicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        app:dampingRatio="0.5"
-        app:dotsColor="@color/light_blue"
-        app:dotsCornerRadius="10dp"
-
-        app:dotsSize="14dp"
-        app:dotsSpacing="5dp"
-        app:dotsStrokeColor="@color/hintColor"
-        app:dotsStrokeWidth="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/confirmButton"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:stiffness="200" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/confirmButton"/>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/confirmButton"

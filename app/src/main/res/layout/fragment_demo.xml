@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
     android:background="@color/white"
-    tools:context=".fragments.WorkoutDetailsFragment">
-
+    tools:context=".DemoFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -18,7 +17,7 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="360dp"
             app:contentScrim="@color/white"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
@@ -95,7 +94,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="-22dp"
         android:background="@drawable/corner_layout"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -426,4 +425,6 @@
         android:layout_marginBottom="30dp"
         android:background="@drawable/register_button_background"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
