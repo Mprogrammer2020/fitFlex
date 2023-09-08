@@ -2,17 +2,17 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
+    android:layout_gravity="top|end"
     android:layout_height="wrap_content">
 
     <!-- Your badge view here (e.g., a small circular View with a background color) -->
     <ImageView
         android:id="@+id/badge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
         android:elevation="10dp"
-        android:src="@drawable/dot_icons"
-        android:visibility="invisible"
-        android:layout_gravity="top|end" />
+        android:layout_gravity="center"
+        android:src="@drawable/dot_icons" />
 
     <!-- Your icon view here -->
 

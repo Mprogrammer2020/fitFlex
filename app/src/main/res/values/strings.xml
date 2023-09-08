@@ -203,5 +203,7 @@
     <string name="james_ruth">James Ruth</string>
     <string name="nutrition">Nutrition</string>
     <string name="_6_items">6 items</string>
+    <string name="year">Year</string>
+    <string name="monthly">Monthly</string>
 
 </resources>

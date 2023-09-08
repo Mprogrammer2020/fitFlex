@@ -1,17 +1,22 @@
 package com.netset.fitness.fragments
 
+import android.content.Context
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.PopupWindow
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.R
 import com.netset.fitness.activities.DashBoardActivity
 import com.netset.fitness.adapters.FindFoodAdapter
 import com.netset.fitness.adapters.MealPlannerAdapter
 import com.netset.fitness.databinding.FragmentMealPlannerBinding
+import com.netset.fitness.databinding.PopupLayoutBinding
 import com.netset.fitness.utils.CommonFunction
 import com.netset.models.FindFoodDataItems
 import com.netset.models.MealPlannerDataItems
@@ -34,8 +39,9 @@ class MealPlannerFragment : Fragment() {
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
 
 
-        binding.mealToolbar.fragmentsText.text="Meal Planner"
-        requireActivity().window.statusBarColor= ContextCompat.getColor(requireContext(),R.color.white)
+        binding.mealToolbar.fragmentsText.text = "Meal Planner"
+        requireActivity().window.statusBarColor =
+            ContextCompat.getColor(requireContext(), R.color.white)
 
 
         binding.mealToolbar.backIconBackground.setOnClickListener {
@@ -43,21 +49,35 @@ class MealPlannerFragment : Fragment() {
         }
 
         binding.breakfastIcon.setOnClickListener {
-            CommonFunction.openFragment(requireActivity().supportFragmentManager,
-                BreakfastFragment(),R.id.dashboardContainerView,true)
+            CommonFunction.openFragment(
+                requireActivity().supportFragmentManager,
+                BreakfastFragment(), R.id.dashboardContainerView, true
+            )
         }
 
         binding.checkIcon.setOnClickListener {
-            CommonFunction.openFragment(requireActivity().supportFragmentManager,
-                MealScheduleFragment(),R.id.dashboardContainerView,true)
+            CommonFunction.openFragment(
+                requireActivity().supportFragmentManager,
+                MealScheduleFragment(), R.id.dashboardContainerView, true
+            )
 
         }
-         mealPlannerDataShow()
-         foodListDataShow()
 
+        binding.weeklyIcon.setOnClickListener {
 
+            val popupBinding = PopupLayoutBinding.inflate(layoutInflater)
+            val popupRootView = popupBinding.root
+            val popupWindow = PopupWindow(popupRootView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true)
+            popupWindow.setBackgroundDrawable(ContextCompat.getDrawable(requireContext(), android.R.color.transparent))
+            val xOffset = binding.weeklyIcon.width
+            val yOffset = 0
+            popupWindow.showAsDropDown(binding.weeklyIcon, xOffset, yOffset)
+
+        }
+
+        foodListDataShow()
+        mealPlannerDataShow()
     }
-
     private fun foodListDataShow() {
         foodList.clear()
         foodList.add(FindFoodDataItems(R.drawable.right_corner_bg,R.drawable.burger_icon,"Breakfast","120+ foods",R.drawable.common_button_bg))

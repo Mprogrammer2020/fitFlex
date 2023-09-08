@@ -48,6 +48,7 @@
                 android:src="@drawable/zap_off_icon" />
 
             <ImageView
+                android:id="@+id/cameraIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

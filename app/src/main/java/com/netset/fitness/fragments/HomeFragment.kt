@@ -1,11 +1,15 @@
 package com.netset.fitness.fragments
 
+import android.content.Context
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,7 +25,9 @@ import com.netset.models.LatestWorkoutItems
 class HomeFragment : Fragment() {
  private lateinit var binding:FragmentHomeBinding
     private var list:ArrayList<LatestWorkoutItems> = ArrayList()
-
+    private lateinit var callback: OnBackPressedCallback
+    private var doubleBackToExitPressedOnce = false
+    private lateinit var mainActivity: DashBoardActivity
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -44,8 +50,6 @@ class HomeFragment : Fragment() {
         literTextGradient()
         hoursMinutesFradient()
         caloriesTextGradient()
-
-
 
 
 
@@ -140,4 +144,5 @@ class HomeFragment : Fragment() {
         binding.bpmText.paint.shader = bpmShader
 
     }
+
 }
