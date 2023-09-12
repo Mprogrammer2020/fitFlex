@@ -56,6 +56,8 @@ dependencies {
 
 
     implementation ("com.github.bumptech.glide:glide:4.12.0")
+    implementation ("com.google.android.gms:play-services-auth:20.6.0")
+
 
 
 
