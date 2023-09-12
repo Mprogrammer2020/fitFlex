@@ -12,23 +12,22 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:background="@drawable/blue_bg">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="360dp"
+            android:layout_height="310dp"
             app:contentScrim="@color/white"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
 
             <ImageView
-                android:layout_marginTop="60dp"
-                android:layout_marginBottom="-100dp"
+                android:layout_marginTop="80dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="center"
-                android:src="@drawable/boy_jumping_icon"
+                android:src="@drawable/graph_icon"
                 app:layout_collapseMode="parallax" />
 
             <androidx.appcompat.widget.Toolbar
@@ -41,25 +40,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:id="@+id/backIconBackground"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_marginStart="8dp"
-                        android:background="@drawable/rectangle_background"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/backIcon"
+                    <TextView
+                        android:id="@+id/workoutTrackerText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/back_icon"
-                        app:layout_constraintBottom_toBottomOf="@+id/backIconBackground"
-                        app:layout_constraintEnd_toEndOf="@+id/backIconBackground"
-                        app:layout_constraintStart_toStartOf="@+id/backIconBackground"
-                        app:layout_constraintTop_toTopOf="@+id/backIconBackground" />
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/workout_tracker"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/dotIconBackground"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/dotIconBackground" />
 
                     <ImageView
                         android:id="@+id/dotIconBackground"
@@ -114,295 +106,104 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/workoutNamesText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/fullbody_workout"
-                android:fontFamily="@font/poppins_bold"
-                android:textColor="@color/lightBlack"
-                android:layout_marginStart="25dp"
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dailyWorkoutScheduleBackground"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="25dp"
                 app:layout_constraintTop_toBottomOf="@+id/swapIcon"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textSize="15sp" />
+                android:background="@drawable/target_blue_background">
 
-            <TextView
-                android:id="@+id/exerciseText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_regular"
-                android:text="@string/_11_excercise"
-                android:textColor="@color/grey"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/workoutNamesText"
-                app:layout_constraintTop_toBottomOf="@+id/workoutNamesText" />
-
-            <View
-                android:id="@+id/view"
-                android:layout_width="1dp"
-                android:layout_height="12dp"
-                android:layout_marginStart="4dp"
-                android:background="@color/grey"
-                app:layout_constraintBottom_toBottomOf="@+id/minutesText"
-                app:layout_constraintStart_toEndOf="@+id/exerciseText"
-                app:layout_constraintTop_toTopOf="@+id/minutesText" />
-
-
-            <TextView
-                android:id="@+id/minutesText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_regular"
-                android:layout_marginStart="4dp"
-                android:text="32mins"
-                android:textColor="@color/grey"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/exerciseText"
-                app:layout_constraintStart_toEndOf="@+id/view"
-                app:layout_constraintTop_toTopOf="@+id/exerciseText" />
-
-
-            <View
-                android:id="@+id/viewBackground"
-                android:layout_width="1dp"
-                android:layout_height="12dp"
-                android:layout_marginStart="4dp"
-                android:background="@color/grey"
-                app:layout_constraintBottom_toBottomOf="@+id/caloriesBurnText"
-                app:layout_constraintStart_toEndOf="@+id/minutesText"
-                app:layout_constraintTop_toTopOf="@+id/caloriesBurnText" />
-
-
-            <TextView
-                android:id="@+id/caloriesBurnText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_regular"
-                android:text="@string/_320_calories_burn"
-                android:textColor="@color/grey"
-                android:textSize="12sp"
-                android:layout_marginStart="4dp"
-                app:layout_constraintBottom_toBottomOf="@+id/exerciseText"
-                app:layout_constraintStart_toEndOf="@+id/viewBackground"
-                app:layout_constraintTop_toTopOf="@+id/exerciseText" />
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/heartCardView"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginEnd="30dp"
-                app:cardCornerRadius="5dp"
-                app:layout_constraintBottom_toBottomOf="@+id/exerciseText"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/workoutNamesText" />
-
-
-            <ImageView
-                android:id="@+id/heartIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:elevation="10dp"
-                android:src="@drawable/heart_icon"
-                app:layout_constraintBottom_toBottomOf="@+id/heartCardView"
-                app:layout_constraintEnd_toEndOf="@+id/heartCardView"
-                app:layout_constraintStart_toStartOf="@+id/heartCardView"
-                app:layout_constraintTop_toTopOf="@+id/heartCardView" />
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/scheduleWorkoutBackground"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/target_blue_background"
-                android:layout_marginTop="25dp"
-                android:layout_marginHorizontal="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/exerciseText" >
-
-                <ImageView
-                    android:id="@+id/calendarIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_calendar"
-                    android:layout_marginStart="15dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/scheduleWorkoutBackground"
-                    app:layout_constraintStart_toStartOf="@+id/scheduleWorkoutBackground"
-                    app:layout_constraintTop_toTopOf="@+id/scheduleWorkoutBackground" />
 
                 <TextView
-                    android:id="@+id/scheduleWorkoutText"
+                    android:id="@+id/dailyWorkoutScheduleText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/daily_workout_schedule"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dailyWorkoutScheduleBackground"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/checkIcon"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/check"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="@string/schedule_workout"
-                    android:textColor="@color/grey"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/calendarIcon"
-                    app:layout_constraintStart_toEndOf="@+id/calendarIcon"
-                    app:layout_constraintTop_toTopOf="@+id/calendarIcon" />
+                    android:textSize="10sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/common_button_bg"
+                    app:layout_constraintBottom_toBottomOf="@+id/dailyWorkoutScheduleBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/times"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="11sp"
-                    android:textColor="@color/grey"
-                    app:layout_constraintBottom_toBottomOf="@+id/scheduleWorkoutBackground"
-                    app:layout_constraintEnd_toStartOf="@+id/forwardIcon"
-                    app:layout_constraintTop_toTopOf="@+id/scheduleWorkoutBackground" />
-
-
-                <ImageView
-                    android:id="@+id/forwardIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/forward_icon"
-                    android:layout_marginEnd="15dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/scheduleWorkoutBackground"
-                    app:layout_constraintEnd_toEndOf="@+id/scheduleWorkoutBackground"
-                    app:layout_constraintTop_toTopOf="@+id/scheduleWorkoutBackground" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/DifficultyBackground"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/light_pink_bg"
-                android:layout_marginTop="18dp"
-                android:layout_marginHorizontal="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scheduleWorkoutBackground" >
-
-                <ImageView
-                    android:id="@+id/difficultyIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_difficulity"
-                    android:layout_marginStart="15dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/DifficultyBackground"
-                    app:layout_constraintStart_toStartOf="@+id/DifficultyBackground"
-                    app:layout_constraintTop_toTopOf="@+id/DifficultyBackground" />
-
-                <TextView
-                    android:id="@+id/difficultText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/difficulity"
-                    android:textColor="@color/grey"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/difficultyIcon"
-                    app:layout_constraintStart_toEndOf="@+id/difficultyIcon"
-                    app:layout_constraintTop_toTopOf="@+id/difficultyIcon" />
-
-
-                <TextView
-                    android:id="@+id/beginnerText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/beginner"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="11sp"
-                    android:textColor="@color/grey"
-                    app:layout_constraintBottom_toBottomOf="@+id/DifficultyBackground"
-                    app:layout_constraintEnd_toStartOf="@+id/forwardIcons"
-                    app:layout_constraintTop_toTopOf="@+id/DifficultyBackground" />
-
-
-                <ImageView
-                    android:id="@+id/forwardIcons"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/forward_icon"
-                    android:layout_marginEnd="15dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/DifficultyBackground"
-                    app:layout_constraintEnd_toEndOf="@+id/DifficultyBackground"
-                    app:layout_constraintTop_toTopOf="@+id/DifficultyBackground" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             <TextView
-                android:id="@+id/needText"
+                android:id="@+id/upcomingWorkoutText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/you_ll_need"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="25dp"
                 android:fontFamily="@font/poppins_semibold"
+                android:text="@string/upcoming_workout"
                 android:textColor="@color/lightBlack"
                 android:textSize="15sp"
-                app:layout_constraintTop_toBottomOf="@+id/DifficultyBackground"
-                app:layout_constraintStart_toStartOf="@+id/workoutNamesText" />
-
+                app:layout_constraintStart_toStartOf="@+id/dailyWorkoutScheduleBackground"
+                app:layout_constraintTop_toBottomOf="@+id/dailyWorkoutScheduleBackground" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_5_items"
-                android:textSize="12sp"
-                android:textColor="@color/hintColor"
                 android:fontFamily="@font/poppins_medium"
-                app:layout_constraintBottom_toBottomOf="@+id/needText"
-                app:layout_constraintEnd_toEndOf="@+id/DifficultyBackground"
-                app:layout_constraintTop_toTopOf="@+id/needText" />
+                android:text="@string/see_more"
+                android:textColor="@color/hintColor"
+                android:nestedScrollingEnabled="false"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/upcomingWorkoutText"
+                app:layout_constraintEnd_toEndOf="@+id/dailyWorkoutScheduleBackground"
+                app:layout_constraintTop_toTopOf="@+id/upcomingWorkoutText" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/gymItemsRecyclerView"
+                android:id="@+id/upcomingWorkoutRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:clipToPadding="false"
                 android:nestedScrollingEnabled="false"
-                android:paddingEnd="15dp"
-                android:layout_marginStart="15sp"
-                app:layout_constraintTop_toBottomOf="@+id/needText"/>
-
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/upcomingWorkoutText" />
 
             <TextView
-                android:id="@+id/exerciseTextView"
+                android:id="@+id/trainingText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/exercises"
+                android:text="@string/what_do_you_want_to_train"
+                android:textSize="15sp"
                 android:layout_marginTop="25dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/lightBlack"
-                android:textSize="15sp"
-                app:layout_constraintStart_toStartOf="@+id/needText"
-                app:layout_constraintTop_toBottomOf="@+id/gymItemsRecyclerView" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/_3_sets"
-                android:textColor="@color/hintColor"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/exerciseTextView"
-                app:layout_constraintEnd_toEndOf="@+id/DifficultyBackground"
-                app:layout_constraintTop_toTopOf="@+id/exerciseTextView" />
+                app:layout_constraintStart_toStartOf="@+id/upcomingWorkoutText"
+                app:layout_constraintTop_toBottomOf="@+id/upcomingWorkoutRecyclerView" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/exerciseSetsRecyclerView"
-                android:layout_width="0dp"
+                android:id="@+id/workoutTrainingRecyclerView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
-                android:paddingBottom="120dp"
                 android:nestedScrollingEnabled="false"
-                app:layout_constraintEnd_toEndOf="@+id/textView"
-                app:layout_constraintStart_toStartOf="@+id/exerciseTextView"
-                app:layout_constraintTop_toBottomOf="@+id/exerciseTextView" />
-
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/trainingText" />
 
 
 
@@ -411,20 +212,6 @@
     </androidx.core.widget.NestedScrollView>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/startWorkoutButton"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:layout_marginHorizontal="30dp"
-        android:text="@string/start_workout"
-        android:textSize="16sp"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/register_button_background"
-        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

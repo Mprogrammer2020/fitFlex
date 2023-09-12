@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.netset.fitness.activities.DashBoardActivity
@@ -14,18 +15,22 @@ import com.netset.fitness.adapters.GymItemsAdapter
 import com.netset.fitness.adapters.IngredientsAdapter
 import com.netset.fitness.adapters.NutritionAdapter
 import com.netset.fitness.adapters.TimelineStepsAdapter
+import com.netset.fitness.adapters.UpcomingWorkoutAdapter
+import com.netset.fitness.adapters.WorkoutTrainingAdapter
 import com.netset.fitness.databinding.FragmentDemoBinding
 import com.netset.models.ExerciseSetItems
 import com.netset.models.GymItems
 import com.netset.models.IngredientsDataItems
 import com.netset.models.NutritionDataItems
 import com.netset.models.TimelineStepsDataItems
+import com.netset.models.UpcomingWorkoutItems
+import com.netset.models.WorkoutTrainingItems
 
 
 class DemoFragment : Fragment() {
     private lateinit var binding:FragmentDemoBinding
-    private var list:ArrayList<GymItems> = ArrayList()
-    private var exerciseSetsItems:ArrayList<ExerciseSetItems> = ArrayList()
+    private var list:ArrayList<UpcomingWorkoutItems> = ArrayList()
+    private var workoutTrainingList:ArrayList<WorkoutTrainingItems> = ArrayList()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
         // Inflate the layout for this fragment
@@ -41,42 +46,37 @@ class DemoFragment : Fragment() {
 
         (activity as DashBoardActivity?)?.showHideBottomBar(false)
 
-        gymItemsDataShow()
-        exerciseSetsItemsDataShow()
+        requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+
+        upcomingWorkoutRecyclerViewDataShow()
+        workoutTrainingRecyclerViewDataShow()
+
+    }
+    private fun workoutTrainingRecyclerViewDataShow() {
+        workoutTrainingList.clear()
+        workoutTrainingList.add(WorkoutTrainingItems("Fullbody Workout","11 Exercise","32mins",R.drawable.rope_jump))
+        workoutTrainingList.add(WorkoutTrainingItems("Loverbody Workout","12 Exercise","30mins",R.drawable.lowebody_workout))
+        workoutTrainingList.add(WorkoutTrainingItems("Fullbody Workout","15 Exercise","39mins",R.drawable.ab_workout))
+        binding.workoutTrainingRecyclerView.setHasFixedSize(true)
+        binding.workoutTrainingRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val trainingAdapter = WorkoutTrainingAdapter(requireContext(), workoutTrainingList)
+        binding.workoutTrainingRecyclerView.adapter = trainingAdapter
 
     }
 
-    private fun exerciseSetsItemsDataShow() {
-        exerciseSetsItems.add(ExerciseSetItems("Set 1", arrayListOf<ExerciseSetItems.NestedExerciseSetsItems>(
-            ExerciseSetItems.NestedExerciseSetsItems(R.drawable.exercises_sets,"Warm Up","05:00"),
-            ExerciseSetItems.NestedExerciseSetsItems(R.drawable.jumping_icon,"Jumping Jack","12x"),
-            ExerciseSetItems.NestedExerciseSetsItems(R.drawable.skipping_icon,"Skipping","15x"),
-            ExerciseSetItems.NestedExerciseSetsItems(R.drawable.exerxise_down_icon,"Squats","20x"))))
-
-
-        exerciseSetsItems.add(ExerciseSetItems("Set 2", arrayListOf<ExerciseSetItems.NestedExerciseSetsItems>(
-            ExerciseSetItems.NestedExerciseSetsItems(R.drawable.down_icon,"Incline Push-Ups","12x"),
-            ExerciseSetItems.NestedExerciseSetsItems(R.drawable.pushup_icon,"Push-Ups","12x"))))
-
-        exerciseSetsItems.add(ExerciseSetItems("Set 3", arrayListOf<ExerciseSetItems.NestedExerciseSetsItems>(
-            ExerciseSetItems.NestedExerciseSetsItems(R.drawable.exercises_sets,"Cobra Stretch","15x"))))
-
-
-        binding.exerciseSetsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val exerciseSetsAdapter = ExerciseSetsAdapter(requireContext(), exerciseSetsItems)
-        binding.exerciseSetsRecyclerView.adapter = exerciseSetsAdapter
-    }
-
-    private fun gymItemsDataShow() {
+    private fun upcomingWorkoutRecyclerViewDataShow() {
         list.clear()
-        list.add(GymItems(R.drawable.barbel,"Barbell"))
-        list.add(GymItems(R.drawable.skipping_rope,"Skipping Rope"))
-        list.add(GymItems(R.drawable.barbel,"Barbell"))
-        list.add(GymItems(R.drawable.skipping_rope,"Skipping Rope"))
-        binding.gymItemsRecyclerView.setHasFixedSize(true)
-        binding.gymItemsRecyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
-        val trainingAdapter = GymItemsAdapter(requireContext(), list)
-        binding.gymItemsRecyclerView.adapter = trainingAdapter
+        list.add(UpcomingWorkoutItems(R.drawable.running_boy_background,"Fullbody Workout","Today, 03:00pm"))
+        list.add(UpcomingWorkoutItems(R.drawable.workout_pic,"Upperbody Workout","June 05, 02:00pm"))
+        binding.upcomingWorkoutRecyclerView.setHasFixedSize(true)
+        binding.upcomingWorkoutRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val adapter = UpcomingWorkoutAdapter(requireContext(), list)
+        binding.upcomingWorkoutRecyclerView.adapter = adapter
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
     }
 
 
